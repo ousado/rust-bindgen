@@ -786,6 +786,72 @@ fn cenum_value_to_int_lit(
     }
 }
 
+fn cenum_is_bitflags(items: &[EnumItem]) -> bool {
+    if items.len() < 2 {
+        return false;
+    }
+
+    let all_pow_two = items.iter().all(|ref item| {
+        let is_pos = item.val > 0;
+        let is_pow_two = (item.val & (item.val - 1)) == 0;
+        is_pos && is_pow_two
+    });
+
+    let items_uniq = {
+        let mut v = items.to_vec();
+        v.sort_by_key(|x| x.val);
+        v.dedup();
+        v
+    };
+    let all_differents = items_uniq.len() == items.len();
+
+    all_pow_two && all_differents
+}
+
+fn try_cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem]) -> Option<Vec<P<ast::Item>>> {
+    use syntax::ext::quote::rt::ExtParseUtils;
+    // TODO: not sure : all spans
+    if !cenum_is_bitflags(items) {
+        return None;
+    }
+
+    let path = ctx.ext_cx.path(ctx.span, ["bitflags", "bitflags"].iter().map(|item| ctx.ext_cx.ident_of(item)).collect());
+
+    let flags = items.iter()
+        .map(|ref item| format!("const {name} = {value}",
+                             name = item.name,
+                             value = item.val.to_string()))
+        .fold(String::new(),
+              |acc, ref item| format!("{} {},", acc, item));
+
+    let tokens = ctx.ext_cx.parse_tts(format!(
+            "flags {name}: {ctype} {{
+                {flags}
+            }}",
+            name = name,
+            // TODO: use proper type
+            ctype = "u32",
+            flags = flags
+    ));
+
+    let node = ast::ItemKind::Mac(respan(ctx.span, ast::Mac_{
+        path: path,
+        tts: tokens,
+        ctxt: ast::EMPTY_CTXT
+    }));
+
+    Some(vec!(P(ast::Item {
+        // TODO: not sure
+        ident: ctx.ext_cx.ident_of("bitflags"),
+        attrs: vec!(),
+        // TODO: not sure
+        id: ast::DUMMY_NODE_ID,
+        node: node,
+        vis: ast::Visibility::Public,
+        span: ctx.span
+    })))
+}
+
 fn cenum_to_rs(
        ctx: &mut GenCtx,
        rust_enums: bool,
@@ -800,6 +866,10 @@ fn cenum_to_rs(
     let enum_is_signed = kind.is_signed();
     let enum_repr = enum_size_to_rust_type_name(enum_is_signed, layout.size);
     let mut items = vec![];
+
+    if let Some(bitflags) = try_cenum_to_bitflags(ctx, &name, enum_items) {
+        return bitflags;
+    }
 
     if !rust_enums {
         items.push(ctx.ext_cx.item_ty(
