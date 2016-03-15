@@ -813,6 +813,11 @@ fn cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem], enum_r
     // TODO: not sure : all spans
     assert!(cenum_is_bitflags(items));
 
+    println!("A bitflag will be generated. Please insert the following in your main:
+             #![cfg_attr(feature = \"assignment_operators\", feature(augmented_assignments, op_assign_traits))]
+             #[macro_use]
+             extern crate bitflags");
+
     let path = ctx.ext_cx.path(ctx.span, ["bitflags", "bitflags"].iter().map(|item| ctx.ext_cx.ident_of(item)).collect());
 
     let flags = items.iter()
