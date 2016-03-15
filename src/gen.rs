@@ -808,12 +808,10 @@ fn cenum_is_bitflags(items: &[EnumItem]) -> bool {
     all_pow_two && all_differents
 }
 
-fn try_cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem]) -> Option<Vec<P<ast::Item>>> {
+fn cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem], enum_repr: &str) -> Vec<P<ast::Item>> {
     use syntax::ext::quote::rt::ExtParseUtils;
     // TODO: not sure : all spans
-    if !cenum_is_bitflags(items) {
-        return None;
-    }
+    assert!(cenum_is_bitflags(items));
 
     let path = ctx.ext_cx.path(ctx.span, ["bitflags", "bitflags"].iter().map(|item| ctx.ext_cx.ident_of(item)).collect());
 
@@ -830,7 +828,7 @@ fn try_cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem]) ->
             }}",
             name = name,
             // TODO: use proper type
-            ctype = "u32",
+            ctype = enum_repr,
             flags = flags
     ));
 
@@ -840,7 +838,7 @@ fn try_cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem]) ->
         ctxt: ast::EMPTY_CTXT
     }));
 
-    Some(vec!(P(ast::Item {
+    vec!(P(ast::Item {
         // TODO: not sure
         ident: ctx.ext_cx.ident_of("bitflags"),
         attrs: vec!(),
@@ -849,7 +847,7 @@ fn try_cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem]) ->
         node: node,
         vis: ast::Visibility::Public,
         span: ctx.span
-    })))
+    }))
 }
 
 fn cenum_to_rs(
@@ -867,8 +865,8 @@ fn cenum_to_rs(
     let enum_repr = enum_size_to_rust_type_name(enum_is_signed, layout.size);
     let mut items = vec![];
 
-    if let Some(bitflags) = try_cenum_to_bitflags(ctx, &name, enum_items) {
-        return bitflags;
+    if cenum_is_bitflags(enum_items) {
+        return cenum_to_bitflags(ctx, &name, enum_items, enum_repr);
     }
 
     if !rust_enums {
