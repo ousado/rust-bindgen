@@ -828,7 +828,7 @@ fn cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem], enum_r
               |acc, ref item| format!("{} {},", acc, item));
 
     let tokens = ctx.ext_cx.parse_tts(format!(
-            "flags {name}: {ctype} {{
+            "pub flags {name}: {ctype} {{
                 {flags}
             }}",
             name = name,
@@ -850,7 +850,8 @@ fn cenum_to_bitflags(ctx: &mut GenCtx, name: &String, items: &[EnumItem], enum_r
         // TODO: not sure
         id: ast::DUMMY_NODE_ID,
         node: node,
-        vis: ast::Visibility::Public,
+        // we can't do `pub bitflags!()`
+        vis: ast::Visibility::Inherited,
         span: ctx.span
     }))
 }
