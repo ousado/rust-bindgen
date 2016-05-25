@@ -32,6 +32,11 @@ matrix:
       env: LLVM_VERSION=3.5
       rust: nightly
       script: cargo build --features clippy
+    - os: linux
+      rust: nightly
+      script:
+        - cd bindgen_plugin
+        - cargo test --verbose
 
 notifications:
   webhooks: http://build.servo.org:54856/travis
