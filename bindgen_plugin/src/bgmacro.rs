@@ -82,6 +82,7 @@ pub fn bindgen_macro(cx: &mut base::ExtCtxt, sp: codemap::Span, tts: &[ast::Toke
 trait MacroArgsVisitor {
     fn visit_str(&mut self, name: Option<&str>, val: &str) -> bool;
     fn visit_int(&mut self, name: Option<&str>, val: i64) -> bool;
+    fn visit_uint(&mut self, name: Option<&str>, val: u64) -> bool;
     fn visit_bool(&mut self, name: Option<&str>, val: bool) -> bool;
     fn visit_ident(&mut self, name: Option<&str>, ident: &str) -> bool;
 }
@@ -122,6 +123,11 @@ impl MacroArgsVisitor for BindgenArgsVisitor {
         false
     }
 
+    fn visit_uint(&mut self, name: Option<&str>, _val: u64) -> bool {
+        if name.is_some() { self.seen_named = true; }
+        false
+    }
+
     fn visit_bool(&mut self, name: Option<&str>, val: bool) -> bool {
         if name.is_some() { self.seen_named = true; }
         match name {
@@ -151,7 +157,7 @@ fn parse_macro_opts(cx: &mut base::ExtCtxt, tts: &[ast::TokenTree], visit: &mut 
         // Check for [ident=]value and if found save ident to name
         if parser.look_ahead(1, |t| t == &token::Eq) {
             match parser.bump_and_get() {
-                Ok(token::Ident(ident, _)) => {
+                token::Token::Ident(ident) => {
                     let ident = parser.id_to_interned_str(ident);
                     name = Some(ident.to_string());
                     if let Err(_) = parser.expect(&token::Eq) {
@@ -167,12 +173,10 @@ fn parse_macro_opts(cx: &mut base::ExtCtxt, tts: &[ast::TokenTree], visit: &mut 
 
         match parser.token {
             // Match [ident]
-            token::Ident(val, _) => {
+            token::Token::Ident(val) => {
                 let val = parser.id_to_interned_str(val);
                 span.hi = parser.span.hi;
-                if let Err(_) = parser.bump() {
-                    return false;
-                }
+                parser.bump();
 
                 // Bools are simply encoded as idents
                 let ret = match &*val {
@@ -190,17 +194,15 @@ fn parse_macro_opts(cx: &mut base::ExtCtxt, tts: &[ast::TokenTree], visit: &mut 
                 let expr = cx.expander().fold_expr(parser.parse_expr().unwrap());
                 span.hi = expr.span.hi;
                 match expr.node {
-                    ast::ExprLit(ref lit) => {
+                    ast::ExprKind::Lit(ref lit) => {
                         let ret = match lit.node {
-                            ast::LitStr(ref s, _) => visit.visit_str(as_str(&name), &*s),
-                            ast::LitBool(b) => visit.visit_bool(as_str(&name), b),
-                            ast::LitInt(i, ast::SignedIntLit(_, sign)) |
-                            ast::LitInt(i, ast::UnsuffixedIntLit(sign)) => {
-                                let i = i as i64;
-                                let i = if sign == ast::Minus { -i } else { i };
-                                visit.visit_int(as_str(&name), i)
+                            ast::LitKind::Str(ref s, _) => visit.visit_str(as_str(&name), &*s),
+                            ast::LitKind::Bool(b) => visit.visit_bool(as_str(&name), b),
+                            ast::LitKind::Int(i, ast::LitIntType::Unsigned(_)) |
+                            ast::LitKind::Int(i, ast::LitIntType::Unsuffixed) => {
+                                visit.visit_uint(as_str(&name), i)
                             },
-                            ast::LitInt(i, ast::UnsignedIntLit(_)) => visit.visit_int(as_str(&name), i as i64),
+                            ast::LitKind::Int(i, ast::LitIntType::Signed(_)) => visit.visit_int(as_str(&name), i as i64),
                             _ => {
                                 cx.span_err(span, "invalid argument format");
                                 return false
@@ -223,7 +225,7 @@ fn parse_macro_opts(cx: &mut base::ExtCtxt, tts: &[ast::TokenTree], visit: &mut 
             return args_good
         }
 
-        if parser.eat(&token::Comma).is_err() {
+        if !parser.eat(&token::Comma) {
             cx.span_err(parser.span, "invalid argument format");
             return false
         }
