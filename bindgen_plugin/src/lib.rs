@@ -5,6 +5,7 @@
 extern crate bindgen;
 extern crate rustc_plugin;
 extern crate syntax;
+extern crate clang_sys;
 
 mod bgmacro;
 

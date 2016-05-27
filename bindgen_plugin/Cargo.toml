@@ -6,8 +6,11 @@ description = "A binding generator for Rust - compiler plugin"
 authors = ["Jyun-Yan You <jyyou.tw@gmail.com>"]
 license = "BSD-3-Clause"
 
+[dependencies]
+clang-sys = "~0.6.0"
+
 [dependencies.bindgen]
-version = "0.16.0"
+version = "0.17.0"
 path = ".."
 
 [features]

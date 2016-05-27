@@ -1,5 +1,6 @@
 use std::default::Default;
 use std::env;
+use std::fmt;
 use std::path::Path;
 
 use syntax::ast;
@@ -11,7 +12,8 @@ use syntax::parse::token;
 use syntax::ptr::P;
 use syntax::util::small_vector::SmallVector;
 
-use bindgen::{Bindings, BindgenOptions, LinkType, Logger, self};
+use bindgen::{Bindings, BindgenOptions, LinkType, Logger};
+use clang_sys;
 
 pub fn bindgen_macro(cx: &mut base::ExtCtxt, sp: codemap::Span, tts: &[ast::TokenTree]) -> Box<base::MacResult+'static> {
     let mut visit = BindgenArgsVisitor {
@@ -28,9 +30,11 @@ pub fn bindgen_macro(cx: &mut base::ExtCtxt, sp: codemap::Span, tts: &[ast::Toke
     let clang_args = visit.options.clang_args.join(" ");
     visit.options.clang_args = parse_process_args(&clang_args[..]);
 
-    if let Some(path) = bindgen::get_include_dir() {
-        visit.options.clang_args.push("-I".to_owned());
-        visit.options.clang_args.push(path);
+    let clang = clang_sys::support::Clang::find(None).expect("No clang found, is it installed?");
+    let mut args = Vec::new();
+    for dir in clang.c_search_paths {
+        args.push("-idirafter".to_owned());
+        args.push(dir.to_str().unwrap().to_owned());
     }
 
     // Set the working dir to the directory containing the invoking rs file so
@@ -333,6 +337,12 @@ impl<'a, 'b> Logger for MacroLogger<'a, 'b> {
 
     fn warn(&self, msg: &str) {
         self.cx.span_warn(self.sp, msg)
+    }
+}
+
+impl<'a, 'b> fmt::Debug for MacroLogger<'a, 'b> {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "MacroLogger")
     }
 }
 
