@@ -493,26 +493,12 @@ fn ctypedef_to_rs(ctx: &mut GenCtx,
             "size_t" | "uintptr_t" => mk_ty(ctx, false, vec!["usize".to_string()]),
             // Same as above
             "ptrdiff_t" | "intptr_t" | "ssize_t" => mk_ty(ctx, false, vec!["isize".to_string()]),
-            "uint8_t" => mk_ty(ctx, false, vec!["u8".to_string()]),
-            "int8_t" => mk_ty(ctx, false, vec!["i8".to_string()]),
-            "uint16_t" => mk_ty(ctx, false, vec!["u16".to_string()]),
-            "int16_t" => mk_ty(ctx, false, vec!["i16".to_string()]),
-            "uint32_t" => mk_ty(ctx, false, vec!["u32".to_string()]),
-            "int32_t" => mk_ty(ctx, false, vec!["i32".to_string()]),
-            "uint64_t" => mk_ty(ctx, false, vec!["u64".to_string()]),
-            "int64_t" => mk_ty(ctx, false, vec!["i64".to_string()]),
             name =>
                 match *ty {
                     TInt(kind,_) =>
                         match regex::Regex::new(r"[A-Za-z0-9]*(64|32|16|8)_t").unwrap().captures(name) {
                             Some(cap) => {
-                                let iks = match cap.at(1).unwrap() {
-                                    "64" => if kind.is_signed() {"i64"} else {"u64"},
-                                    "32" => if kind.is_signed() {"i32"} else {"u32"},
-                                    "16" => if kind.is_signed() {"i16"} else {"u16"},
-                                    "8"  => if kind.is_signed() {"i8"} else {"u8"},
-                                    _ => unreachable!()
-                                };
+                                let iks = format!("{}{}", if kind.is_signed() {"i"} else {"u"}, cap.at(1).unwrap());
                                 mk_ty(ctx, false, vec![iks.to_string()])
                             },
                             None =>  cty_to_rs(ctx, ty, options)
