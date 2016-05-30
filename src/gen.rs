@@ -1,3 +1,5 @@
+extern crate regex;
+
 use std;
 use std::mem;
 use std::cell::RefCell;
@@ -499,7 +501,24 @@ fn ctypedef_to_rs(ctx: &mut GenCtx,
             "int32_t" => mk_ty(ctx, false, vec!["i32".to_string()]),
             "uint64_t" => mk_ty(ctx, false, vec!["u64".to_string()]),
             "int64_t" => mk_ty(ctx, false, vec!["i64".to_string()]),
-            _ => cty_to_rs(ctx, ty, options),
+            name =>
+                match *ty {
+                    TInt(kind,_) =>
+                        match regex::Regex::new(r"[A-Za-z0-9]*(64|32|16|8)_t").unwrap().captures(name) {
+                            Some(cap) => {
+                                let iks = match cap.at(1).unwrap() {
+                                    "64" => if kind.is_signed() {"i64"} else {"u64"},
+                                    "32" => if kind.is_signed() {"i32"} else {"u32"},
+                                    "16" => if kind.is_signed() {"i16"} else {"u16"},
+                                    "8"  => if kind.is_signed() {"i8"} else {"u8"},
+                                    _ => unreachable!()
+                                };
+                                mk_ty(ctx, false, vec![iks.to_string()])
+                            },
+                            None =>  cty_to_rs(ctx, ty, options)
+                        },
+                   _ => cty_to_rs(ctx, ty, options)
+                }
         };
         let rust_name = rust_id(ctx, name, &options.remove_prefix).0;
         let base = ast::ItemKind::Ty(P(ast::Ty {
