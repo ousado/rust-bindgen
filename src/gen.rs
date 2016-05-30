@@ -496,7 +496,7 @@ fn ctypedef_to_rs(ctx: &mut GenCtx,
             name =>
                 match *ty {
                     TInt(kind,_) =>
-                        match regex::Regex::new(r"[A-Za-z0-9]*(64|32|16|8)_t").unwrap().captures(name) {
+                        match regex::Regex::new(r"(64|32|16|8)_t$").unwrap().captures(name) {
                             Some(cap) => {
                                 let iks = format!("{}{}", if kind.is_signed() {"i"} else {"u"}, cap.at(1).unwrap());
                                 mk_ty(ctx, false, vec![iks.to_string()])
