@@ -503,7 +503,7 @@ fn ctypedef_to_rs(ctx: &mut GenCtx,
                             },
                             None =>  cty_to_rs(ctx, ty, options)
                         },
-                   _ => cty_to_rs(ctx, ty, options)
+                    _ => cty_to_rs(ctx, ty, options)
                 }
         };
         let rust_name = rust_id(ctx, name, &options.remove_prefix).0;
