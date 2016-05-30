@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["LinkType","Type of the link to the library which binding is generating."]],"struct":[["Bindings","Contains the generated code."],["Builder","A builder to generate bindings."]],"trait":[["Logger","Trait used internaly to log things with context like the C file line number."]]});

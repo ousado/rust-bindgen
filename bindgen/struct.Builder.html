@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Builder` struct in crate `bindgen`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Builder">
+
+    <title>bindgen::Builder - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>bindgen</a></p><script>window.sidebarCurrent = {name: 'Builder', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>bindgen</a>::<wbr><a class='struct' href=''>Builder</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-2027' class='srclink' href='../src/bindgen/src/lib.rs.html#42-45' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Builder&lt;'a&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>A builder to generate bindings.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../bindgen/struct.Builder.html' title='bindgen::Builder'>Builder</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class='struct' href='../bindgen/struct.Builder.html' title='bindgen::Builder'>Builder</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Returns a new builder for Bindgen.</p>
+</div><h4 id='method.header' class='method'><code>fn <a href='#method.header' class='fnname'>header</a>&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(&amp;mut self, header: T) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Add a C header to parse.</p>
+</div><h4 id='method.match_pat' class='method'><code>fn <a href='#method.match_pat' class='fnname'>match_pat</a>&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(&amp;mut self, arg: T) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Add a pattern to filter which file to generate a binding for.</p>
+</div><h4 id='method.clang_arg' class='method'><code>fn <a href='#method.clang_arg' class='fnname'>clang_arg</a>&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(&amp;mut self, arg: T) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Add a clang CLI argument.</p>
+</div><h4 id='method.link' class='method'><code>fn <a href='#method.link' class='fnname'>link</a>&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(&amp;mut self, library: T, link_type: <a class='enum' href='../bindgen/enum.LinkType.html' title='bindgen::LinkType'>LinkType</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Add a library to link.</p>
+</div><h4 id='method.forbid_unknown_types' class='method'><code>fn <a href='#method.forbid_unknown_types' class='fnname'>forbid_unknown_types</a>(&amp;mut self) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Force bindgen to exit if a type is not recognized.</p>
+</div><h4 id='method.builtins' class='method'><code>fn <a href='#method.builtins' class='fnname'>builtins</a>(&amp;mut self) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Control if we should use the c builtins like <code>__va_list</code>.</p>
+</div><h4 id='method.derive_debug' class='method'><code>fn <a href='#method.derive_debug' class='fnname'>derive_debug</a>(&amp;mut self, derive_debug: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Control if the generated structs will derive Debug.</p>
+</div><h4 id='method.rust_enums' class='method'><code>fn <a href='#method.rust_enums' class='fnname'>rust_enums</a>(&amp;mut self, value: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Control if bindgen should convert the C enums to rust enums or rust constants.</p>
+</div><h4 id='method.log' class='method'><code>fn <a href='#method.log' class='fnname'>log</a>(&amp;mut self, logger: &amp;'a <a class='trait' href='../bindgen/trait.Logger.html' title='bindgen::Logger'>Logger</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Set the logger to use.</p>
+</div><h4 id='method.override_enum_ty' class='method'><code>fn <a href='#method.override_enum_ty' class='fnname'>override_enum_ty</a>&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(&amp;mut self, ty: T) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Overrides the type used to represent a C enum.</p>
+</div><h4 id='method.remove_prefix' class='method'><code>fn <a href='#method.remove_prefix' class='fnname'>remove_prefix</a>&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(&amp;mut self, ty: T) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Set the prefix to remove from all the symbols, like <code>libfoo_</code>.</p>
+</div><h4 id='method.emit_ast' class='method'><code>fn <a href='#method.emit_ast' class='fnname'>emit_ast</a>(&amp;mut self, value: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Controls if bindgen should also print the parsed AST (for debug).</p>
+</div><h4 id='method.use_core' class='method'><code>fn <a href='#method.use_core' class='fnname'>use_core</a>(&amp;mut self, value: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Defines if we should use <code>std</code> or <code>core</code> for <code>Option</code> and such.</p>
+</div><h4 id='method.ctypes_prefix' class='method'><code>fn <a href='#method.ctypes_prefix' class='fnname'>ctypes_prefix</a>&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;&gt;(&amp;mut self, prefix: T) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Sets the prefix to use for c_void and others.</p>
+</div><h4 id='method.generate' class='method'><code>fn <a href='#method.generate' class='fnname'>generate</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../bindgen/struct.Bindings.html' title='bindgen::Bindings'>Bindings</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<div class='docblock'><p>Generate the binding using the options previously set.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../bindgen/struct.Builder.html' title='bindgen::Builder'>Builder</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../bindgen/struct.Builder.html' title='bindgen::Builder'>Builder</a>&lt;'a&gt;</code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../bindgen/struct.Builder.html' title='bindgen::Builder'>Builder</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../bindgen/struct.Builder.html' title='bindgen::Builder'>Builder</a>&lt;'a&gt;</code></h4>
+<h4 id='method.clone_from' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../bindgen/struct.Builder.html' title='bindgen::Builder'>Builder</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "bindgen";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

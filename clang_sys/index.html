@@ -1,0 +1,3123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `clang_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, clang_sys">
+
+    <title>clang_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'clang_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>clang_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/clang_sys/lib.rs.html#15-1519' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Rust bindings for <code>libclang</code>.</p>
+
+<h2 id='supported-versions' class='section-header'><a href='#supported-versions'>Supported Versions</a></h2>
+<ul>
+<li>3.5 - <a href="https://kylemayes.github.io/clang-sys/3_5/clang_sys">Documentation</a></li>
+<li>3.6 - <a href="https://kylemayes.github.io/clang-sys/3_6/clang_sys">Documentation</a></li>
+<li>3.7 - <a href="https://kylemayes.github.io/clang-sys/3_7/clang_sys">Documentation</a></li>
+<li>3.8 - <a href="https://kylemayes.github.io/clang-sys/3_8/clang_sys">Documentation</a></li>
+</ul>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='support/index.html'
+                                  title='clang_sys::support'>support</a></td>
+                           <td class='docblock short'>
+                                <p>Provides helper functionality.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCodeCompleteResults.html'
+                                  title='clang_sys::CXCodeCompleteResults'>CXCodeCompleteResults</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCodeComplete_Flags.html'
+                                  title='clang_sys::CXCodeComplete_Flags'>CXCodeComplete_Flags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCompilationDatabase.html'
+                                  title='clang_sys::CXCompilationDatabase'>CXCompilationDatabase</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCompileCommand.html'
+                                  title='clang_sys::CXCompileCommand'>CXCompileCommand</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCompileCommands.html'
+                                  title='clang_sys::CXCompileCommands'>CXCompileCommands</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCompletionContext.html'
+                                  title='clang_sys::CXCompletionContext'>CXCompletionContext</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCompletionResult.html'
+                                  title='clang_sys::CXCompletionResult'>CXCompletionResult</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCompletionString.html'
+                                  title='clang_sys::CXCompletionString'>CXCompletionString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCursor.html'
+                                  title='clang_sys::CXCursor'>CXCursor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCursorAndRangeVisitor.html'
+                                  title='clang_sys::CXCursorAndRangeVisitor'>CXCursorAndRangeVisitor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXCursorSet.html'
+                                  title='clang_sys::CXCursorSet'>CXCursorSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXDiagnostic.html'
+                                  title='clang_sys::CXDiagnostic'>CXDiagnostic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXDiagnosticDisplayOptions.html'
+                                  title='clang_sys::CXDiagnosticDisplayOptions'>CXDiagnosticDisplayOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXDiagnosticSet.html'
+                                  title='clang_sys::CXDiagnosticSet'>CXDiagnosticSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXFile.html'
+                                  title='clang_sys::CXFile'>CXFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXFileUniqueID.html'
+                                  title='clang_sys::CXFileUniqueID'>CXFileUniqueID</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXGlobalOptFlags.html'
+                                  title='clang_sys::CXGlobalOptFlags'>CXGlobalOptFlags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxAttrInfo.html'
+                                  title='clang_sys::CXIdxAttrInfo'>CXIdxAttrInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxBaseClassInfo.html'
+                                  title='clang_sys::CXIdxBaseClassInfo'>CXIdxBaseClassInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxCXXClassDeclInfo.html'
+                                  title='clang_sys::CXIdxCXXClassDeclInfo'>CXIdxCXXClassDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxClientASTFile.html'
+                                  title='clang_sys::CXIdxClientASTFile'>CXIdxClientASTFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxClientContainer.html'
+                                  title='clang_sys::CXIdxClientContainer'>CXIdxClientContainer</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxClientEntity.html'
+                                  title='clang_sys::CXIdxClientEntity'>CXIdxClientEntity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxClientFile.html'
+                                  title='clang_sys::CXIdxClientFile'>CXIdxClientFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxContainerInfo.html'
+                                  title='clang_sys::CXIdxContainerInfo'>CXIdxContainerInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxDeclInfo.html'
+                                  title='clang_sys::CXIdxDeclInfo'>CXIdxDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxDeclInfoFlags.html'
+                                  title='clang_sys::CXIdxDeclInfoFlags'>CXIdxDeclInfoFlags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxEntityInfo.html'
+                                  title='clang_sys::CXIdxEntityInfo'>CXIdxEntityInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxEntityRefInfo.html'
+                                  title='clang_sys::CXIdxEntityRefInfo'>CXIdxEntityRefInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxIBOutletCollectionAttrInfo.html'
+                                  title='clang_sys::CXIdxIBOutletCollectionAttrInfo'>CXIdxIBOutletCollectionAttrInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxImportedASTFileInfo.html'
+                                  title='clang_sys::CXIdxImportedASTFileInfo'>CXIdxImportedASTFileInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxIncludedFileInfo.html'
+                                  title='clang_sys::CXIdxIncludedFileInfo'>CXIdxIncludedFileInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxLoc.html'
+                                  title='clang_sys::CXIdxLoc'>CXIdxLoc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxObjCCategoryDeclInfo.html'
+                                  title='clang_sys::CXIdxObjCCategoryDeclInfo'>CXIdxObjCCategoryDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxObjCContainerDeclInfo.html'
+                                  title='clang_sys::CXIdxObjCContainerDeclInfo'>CXIdxObjCContainerDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxObjCInterfaceDeclInfo.html'
+                                  title='clang_sys::CXIdxObjCInterfaceDeclInfo'>CXIdxObjCInterfaceDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxObjCPropertyDeclInfo.html'
+                                  title='clang_sys::CXIdxObjCPropertyDeclInfo'>CXIdxObjCPropertyDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxObjCProtocolRefInfo.html'
+                                  title='clang_sys::CXIdxObjCProtocolRefInfo'>CXIdxObjCProtocolRefInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIdxObjCProtocolRefListInfo.html'
+                                  title='clang_sys::CXIdxObjCProtocolRefListInfo'>CXIdxObjCProtocolRefListInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIndex.html'
+                                  title='clang_sys::CXIndex'>CXIndex</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIndexAction.html'
+                                  title='clang_sys::CXIndexAction'>CXIndexAction</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXIndexOptFlags.html'
+                                  title='clang_sys::CXIndexOptFlags'>CXIndexOptFlags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXModule.html'
+                                  title='clang_sys::CXModule'>CXModule</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXNameRefFlags.html'
+                                  title='clang_sys::CXNameRefFlags'>CXNameRefFlags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXObjCDeclQualifierKind.html'
+                                  title='clang_sys::CXObjCDeclQualifierKind'>CXObjCDeclQualifierKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXObjCPropertyAttrKind.html'
+                                  title='clang_sys::CXObjCPropertyAttrKind'>CXObjCPropertyAttrKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXPlatformAvailability.html'
+                                  title='clang_sys::CXPlatformAvailability'>CXPlatformAvailability</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXRemapping.html'
+                                  title='clang_sys::CXRemapping'>CXRemapping</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXReparse_Flags.html'
+                                  title='clang_sys::CXReparse_Flags'>CXReparse_Flags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXSaveTranslationUnit_Flags.html'
+                                  title='clang_sys::CXSaveTranslationUnit_Flags'>CXSaveTranslationUnit_Flags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXSourceLocation.html'
+                                  title='clang_sys::CXSourceLocation'>CXSourceLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXSourceRange.html'
+                                  title='clang_sys::CXSourceRange'>CXSourceRange</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXSourceRangeList.html'
+                                  title='clang_sys::CXSourceRangeList'>CXSourceRangeList</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXString.html'
+                                  title='clang_sys::CXString'>CXString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXTUResourceUsage.html'
+                                  title='clang_sys::CXTUResourceUsage'>CXTUResourceUsage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXTUResourceUsageEntry.html'
+                                  title='clang_sys::CXTUResourceUsageEntry'>CXTUResourceUsageEntry</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXToken.html'
+                                  title='clang_sys::CXToken'>CXToken</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXTranslationUnit.html'
+                                  title='clang_sys::CXTranslationUnit'>CXTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXTranslationUnit_Flags.html'
+                                  title='clang_sys::CXTranslationUnit_Flags'>CXTranslationUnit_Flags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXType.html'
+                                  title='clang_sys::CXType'>CXType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXUnsavedFile.html'
+                                  title='clang_sys::CXUnsavedFile'>CXUnsavedFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CXVersion.html'
+                                  title='clang_sys::CXVersion'>CXVersion</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IndexerCallbacks.html'
+                                  title='clang_sys::IndexerCallbacks'>IndexerCallbacks</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXAvailabilityKind.html'
+                                  title='clang_sys::CXAvailabilityKind'>CXAvailabilityKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXCallingConv.html'
+                                  title='clang_sys::CXCallingConv'>CXCallingConv</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXChildVisitResult.html'
+                                  title='clang_sys::CXChildVisitResult'>CXChildVisitResult</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXCompilationDatabase_Error.html'
+                                  title='clang_sys::CXCompilationDatabase_Error'>CXCompilationDatabase_Error</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXCompletionChunkKind.html'
+                                  title='clang_sys::CXCompletionChunkKind'>CXCompletionChunkKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXCursorKind.html'
+                                  title='clang_sys::CXCursorKind'>CXCursorKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXDiagnosticSeverity.html'
+                                  title='clang_sys::CXDiagnosticSeverity'>CXDiagnosticSeverity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXErrorCode.html'
+                                  title='clang_sys::CXErrorCode'>CXErrorCode</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXIdxAttrKind.html'
+                                  title='clang_sys::CXIdxAttrKind'>CXIdxAttrKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXIdxEntityCXXTemplateKind.html'
+                                  title='clang_sys::CXIdxEntityCXXTemplateKind'>CXIdxEntityCXXTemplateKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXIdxEntityKind.html'
+                                  title='clang_sys::CXIdxEntityKind'>CXIdxEntityKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXIdxEntityLanguage.html'
+                                  title='clang_sys::CXIdxEntityLanguage'>CXIdxEntityLanguage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXIdxEntityRefKind.html'
+                                  title='clang_sys::CXIdxEntityRefKind'>CXIdxEntityRefKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXIdxObjCContainerKind.html'
+                                  title='clang_sys::CXIdxObjCContainerKind'>CXIdxObjCContainerKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXLanguageKind.html'
+                                  title='clang_sys::CXLanguageKind'>CXLanguageKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXLinkageKind.html'
+                                  title='clang_sys::CXLinkageKind'>CXLinkageKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXLoadDiag_Error.html'
+                                  title='clang_sys::CXLoadDiag_Error'>CXLoadDiag_Error</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXRefQualifierKind.html'
+                                  title='clang_sys::CXRefQualifierKind'>CXRefQualifierKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXResult.html'
+                                  title='clang_sys::CXResult'>CXResult</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXSaveError.html'
+                                  title='clang_sys::CXSaveError'>CXSaveError</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXTUResourceUsageKind.html'
+                                  title='clang_sys::CXTUResourceUsageKind'>CXTUResourceUsageKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXTokenKind.html'
+                                  title='clang_sys::CXTokenKind'>CXTokenKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXTypeKind.html'
+                                  title='clang_sys::CXTypeKind'>CXTypeKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXTypeLayoutError.html'
+                                  title='clang_sys::CXTypeLayoutError'>CXTypeLayoutError</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CXVisitorResult.html'
+                                  title='clang_sys::CXVisitorResult'>CXVisitorResult</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CX_CXXAccessSpecifier.html'
+                                  title='clang_sys::CX_CXXAccessSpecifier'>CX_CXXAccessSpecifier</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCodeComplete_IncludeBriefComments.html'
+                                  title='clang_sys::CXCodeComplete_IncludeBriefComments'>CXCodeComplete_IncludeBriefComments</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCodeComplete_IncludeCodePatterns.html'
+                                  title='clang_sys::CXCodeComplete_IncludeCodePatterns'>CXCodeComplete_IncludeCodePatterns</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCodeComplete_IncludeMacros.html'
+                                  title='clang_sys::CXCodeComplete_IncludeMacros'>CXCodeComplete_IncludeMacros</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_AnyType.html'
+                                  title='clang_sys::CXCompletionContext_AnyType'>CXCompletionContext_AnyType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_AnyValue.html'
+                                  title='clang_sys::CXCompletionContext_AnyValue'>CXCompletionContext_AnyValue</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ArrowMemberAccess.html'
+                                  title='clang_sys::CXCompletionContext_ArrowMemberAccess'>CXCompletionContext_ArrowMemberAccess</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_CXXClassTypeValue.html'
+                                  title='clang_sys::CXCompletionContext_CXXClassTypeValue'>CXCompletionContext_CXXClassTypeValue</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ClassTag.html'
+                                  title='clang_sys::CXCompletionContext_ClassTag'>CXCompletionContext_ClassTag</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_DotMemberAccess.html'
+                                  title='clang_sys::CXCompletionContext_DotMemberAccess'>CXCompletionContext_DotMemberAccess</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_EnumTag.html'
+                                  title='clang_sys::CXCompletionContext_EnumTag'>CXCompletionContext_EnumTag</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_MacroName.html'
+                                  title='clang_sys::CXCompletionContext_MacroName'>CXCompletionContext_MacroName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_Namespace.html'
+                                  title='clang_sys::CXCompletionContext_Namespace'>CXCompletionContext_Namespace</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_NaturalLanguage.html'
+                                  title='clang_sys::CXCompletionContext_NaturalLanguage'>CXCompletionContext_NaturalLanguage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_NestedNameSpecifier.html'
+                                  title='clang_sys::CXCompletionContext_NestedNameSpecifier'>CXCompletionContext_NestedNameSpecifier</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCCategory.html'
+                                  title='clang_sys::CXCompletionContext_ObjCCategory'>CXCompletionContext_ObjCCategory</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCClassMessage.html'
+                                  title='clang_sys::CXCompletionContext_ObjCClassMessage'>CXCompletionContext_ObjCClassMessage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCInstanceMessage.html'
+                                  title='clang_sys::CXCompletionContext_ObjCInstanceMessage'>CXCompletionContext_ObjCInstanceMessage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCInterface.html'
+                                  title='clang_sys::CXCompletionContext_ObjCInterface'>CXCompletionContext_ObjCInterface</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCObjectValue.html'
+                                  title='clang_sys::CXCompletionContext_ObjCObjectValue'>CXCompletionContext_ObjCObjectValue</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCPropertyAccess.html'
+                                  title='clang_sys::CXCompletionContext_ObjCPropertyAccess'>CXCompletionContext_ObjCPropertyAccess</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCProtocol.html'
+                                  title='clang_sys::CXCompletionContext_ObjCProtocol'>CXCompletionContext_ObjCProtocol</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCSelectorName.html'
+                                  title='clang_sys::CXCompletionContext_ObjCSelectorName'>CXCompletionContext_ObjCSelectorName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_ObjCSelectorValue.html'
+                                  title='clang_sys::CXCompletionContext_ObjCSelectorValue'>CXCompletionContext_ObjCSelectorValue</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_StructTag.html'
+                                  title='clang_sys::CXCompletionContext_StructTag'>CXCompletionContext_StructTag</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_Unexposed.html'
+                                  title='clang_sys::CXCompletionContext_Unexposed'>CXCompletionContext_Unexposed</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_UnionTag.html'
+                                  title='clang_sys::CXCompletionContext_UnionTag'>CXCompletionContext_UnionTag</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXCompletionContext_Unknown.html'
+                                  title='clang_sys::CXCompletionContext_Unknown'>CXCompletionContext_Unknown</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXDiagnostic_DisplayCategoryId.html'
+                                  title='clang_sys::CXDiagnostic_DisplayCategoryId'>CXDiagnostic_DisplayCategoryId</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXDiagnostic_DisplayCategoryName.html'
+                                  title='clang_sys::CXDiagnostic_DisplayCategoryName'>CXDiagnostic_DisplayCategoryName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXDiagnostic_DisplayColumn.html'
+                                  title='clang_sys::CXDiagnostic_DisplayColumn'>CXDiagnostic_DisplayColumn</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXDiagnostic_DisplayOption.html'
+                                  title='clang_sys::CXDiagnostic_DisplayOption'>CXDiagnostic_DisplayOption</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXDiagnostic_DisplaySourceLocation.html'
+                                  title='clang_sys::CXDiagnostic_DisplaySourceLocation'>CXDiagnostic_DisplaySourceLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXDiagnostic_DisplaySourceRanges.html'
+                                  title='clang_sys::CXDiagnostic_DisplaySourceRanges'>CXDiagnostic_DisplaySourceRanges</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXGlobalOpt_None.html'
+                                  title='clang_sys::CXGlobalOpt_None'>CXGlobalOpt_None</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXGlobalOpt_ThreadBackgroundPriorityForAll.html'
+                                  title='clang_sys::CXGlobalOpt_ThreadBackgroundPriorityForAll'>CXGlobalOpt_ThreadBackgroundPriorityForAll</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXGlobalOpt_ThreadBackgroundPriorityForEditing.html'
+                                  title='clang_sys::CXGlobalOpt_ThreadBackgroundPriorityForEditing'>CXGlobalOpt_ThreadBackgroundPriorityForEditing</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXGlobalOpt_ThreadBackgroundPriorityForIndexing.html'
+                                  title='clang_sys::CXGlobalOpt_ThreadBackgroundPriorityForIndexing'>CXGlobalOpt_ThreadBackgroundPriorityForIndexing</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXIdxDeclFlag_Skipped.html'
+                                  title='clang_sys::CXIdxDeclFlag_Skipped'>CXIdxDeclFlag_Skipped</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXIndexOptIndexFunctionLocalSymbols.html'
+                                  title='clang_sys::CXIndexOptIndexFunctionLocalSymbols'>CXIndexOptIndexFunctionLocalSymbols</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXIndexOptIndexImplicitTemplateInstantiations.html'
+                                  title='clang_sys::CXIndexOptIndexImplicitTemplateInstantiations'>CXIndexOptIndexImplicitTemplateInstantiations</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXIndexOptNone.html'
+                                  title='clang_sys::CXIndexOptNone'>CXIndexOptNone</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXIndexOptSkipParsedBodiesInSession.html'
+                                  title='clang_sys::CXIndexOptSkipParsedBodiesInSession'>CXIndexOptSkipParsedBodiesInSession</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXIndexOptSuppressRedundantRefs.html'
+                                  title='clang_sys::CXIndexOptSuppressRedundantRefs'>CXIndexOptSuppressRedundantRefs</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXIndexOptSuppressWarnings.html'
+                                  title='clang_sys::CXIndexOptSuppressWarnings'>CXIndexOptSuppressWarnings</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXNameRange_WantQualifier.html'
+                                  title='clang_sys::CXNameRange_WantQualifier'>CXNameRange_WantQualifier</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXNameRange_WantSinglePiece.html'
+                                  title='clang_sys::CXNameRange_WantSinglePiece'>CXNameRange_WantSinglePiece</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXNameRange_WantTemplateArgs.html'
+                                  title='clang_sys::CXNameRange_WantTemplateArgs'>CXNameRange_WantTemplateArgs</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCDeclQualifier_Bycopy.html'
+                                  title='clang_sys::CXObjCDeclQualifier_Bycopy'>CXObjCDeclQualifier_Bycopy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCDeclQualifier_Byref.html'
+                                  title='clang_sys::CXObjCDeclQualifier_Byref'>CXObjCDeclQualifier_Byref</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCDeclQualifier_In.html'
+                                  title='clang_sys::CXObjCDeclQualifier_In'>CXObjCDeclQualifier_In</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCDeclQualifier_Inout.html'
+                                  title='clang_sys::CXObjCDeclQualifier_Inout'>CXObjCDeclQualifier_Inout</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCDeclQualifier_None.html'
+                                  title='clang_sys::CXObjCDeclQualifier_None'>CXObjCDeclQualifier_None</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCDeclQualifier_Oneway.html'
+                                  title='clang_sys::CXObjCDeclQualifier_Oneway'>CXObjCDeclQualifier_Oneway</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCDeclQualifier_Out.html'
+                                  title='clang_sys::CXObjCDeclQualifier_Out'>CXObjCDeclQualifier_Out</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_assign.html'
+                                  title='clang_sys::CXObjCPropertyAttr_assign'>CXObjCPropertyAttr_assign</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_atomic.html'
+                                  title='clang_sys::CXObjCPropertyAttr_atomic'>CXObjCPropertyAttr_atomic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_copy.html'
+                                  title='clang_sys::CXObjCPropertyAttr_copy'>CXObjCPropertyAttr_copy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_getter.html'
+                                  title='clang_sys::CXObjCPropertyAttr_getter'>CXObjCPropertyAttr_getter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_noattr.html'
+                                  title='clang_sys::CXObjCPropertyAttr_noattr'>CXObjCPropertyAttr_noattr</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_nonatomic.html'
+                                  title='clang_sys::CXObjCPropertyAttr_nonatomic'>CXObjCPropertyAttr_nonatomic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_readonly.html'
+                                  title='clang_sys::CXObjCPropertyAttr_readonly'>CXObjCPropertyAttr_readonly</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_readwrite.html'
+                                  title='clang_sys::CXObjCPropertyAttr_readwrite'>CXObjCPropertyAttr_readwrite</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_retain.html'
+                                  title='clang_sys::CXObjCPropertyAttr_retain'>CXObjCPropertyAttr_retain</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_setter.html'
+                                  title='clang_sys::CXObjCPropertyAttr_setter'>CXObjCPropertyAttr_setter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_strong.html'
+                                  title='clang_sys::CXObjCPropertyAttr_strong'>CXObjCPropertyAttr_strong</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_unsafe_unretained.html'
+                                  title='clang_sys::CXObjCPropertyAttr_unsafe_unretained'>CXObjCPropertyAttr_unsafe_unretained</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXObjCPropertyAttr_weak.html'
+                                  title='clang_sys::CXObjCPropertyAttr_weak'>CXObjCPropertyAttr_weak</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXReparse_None.html'
+                                  title='clang_sys::CXReparse_None'>CXReparse_None</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXSaveTranslationUnit_None.html'
+                                  title='clang_sys::CXSaveTranslationUnit_None'>CXSaveTranslationUnit_None</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_CXXChainedPCH.html'
+                                  title='clang_sys::CXTranslationUnit_CXXChainedPCH'>CXTranslationUnit_CXXChainedPCH</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_CacheCompletionResults.html'
+                                  title='clang_sys::CXTranslationUnit_CacheCompletionResults'>CXTranslationUnit_CacheCompletionResults</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_DetailedPreprocessingRecord.html'
+                                  title='clang_sys::CXTranslationUnit_DetailedPreprocessingRecord'>CXTranslationUnit_DetailedPreprocessingRecord</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_ForSerialization.html'
+                                  title='clang_sys::CXTranslationUnit_ForSerialization'>CXTranslationUnit_ForSerialization</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_IncludeBriefCommentsInCodeCompletion.html'
+                                  title='clang_sys::CXTranslationUnit_IncludeBriefCommentsInCodeCompletion'>CXTranslationUnit_IncludeBriefCommentsInCodeCompletion</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_Incomplete.html'
+                                  title='clang_sys::CXTranslationUnit_Incomplete'>CXTranslationUnit_Incomplete</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_None.html'
+                                  title='clang_sys::CXTranslationUnit_None'>CXTranslationUnit_None</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_PrecompiledPreamble.html'
+                                  title='clang_sys::CXTranslationUnit_PrecompiledPreamble'>CXTranslationUnit_PrecompiledPreamble</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.CXTranslationUnit_SkipFunctionBodies.html'
+                                  title='clang_sys::CXTranslationUnit_SkipFunctionBodies'>CXTranslationUnit_SkipFunctionBodies</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXCursorSet_contains.html'
+                                  title='clang_sys::clang_CXCursorSet_contains'>clang_CXCursorSet_contains</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXCursorSet_insert.html'
+                                  title='clang_sys::clang_CXCursorSet_insert'>clang_CXCursorSet_insert</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXIndex_getGlobalOptions.html'
+                                  title='clang_sys::clang_CXIndex_getGlobalOptions'>clang_CXIndex_getGlobalOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXIndex_setGlobalOptions.html'
+                                  title='clang_sys::clang_CXIndex_setGlobalOptions'>clang_CXIndex_setGlobalOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXXMethod_isConst.html'
+                                  title='clang_sys::clang_CXXMethod_isConst'>clang_CXXMethod_isConst</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXXMethod_isPureVirtual.html'
+                                  title='clang_sys::clang_CXXMethod_isPureVirtual'>clang_CXXMethod_isPureVirtual</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXXMethod_isStatic.html'
+                                  title='clang_sys::clang_CXXMethod_isStatic'>clang_CXXMethod_isStatic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CXXMethod_isVirtual.html'
+                                  title='clang_sys::clang_CXXMethod_isVirtual'>clang_CXXMethod_isVirtual</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompilationDatabase_dispose.html'
+                                  title='clang_sys::clang_CompilationDatabase_dispose'>clang_CompilationDatabase_dispose</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompilationDatabase_fromDirectory.html'
+                                  title='clang_sys::clang_CompilationDatabase_fromDirectory'>clang_CompilationDatabase_fromDirectory</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompilationDatabase_getAllCompileCommands.html'
+                                  title='clang_sys::clang_CompilationDatabase_getAllCompileCommands'>clang_CompilationDatabase_getAllCompileCommands</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompilationDatabase_getCompileCommands.html'
+                                  title='clang_sys::clang_CompilationDatabase_getCompileCommands'>clang_CompilationDatabase_getCompileCommands</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommand_getArg.html'
+                                  title='clang_sys::clang_CompileCommand_getArg'>clang_CompileCommand_getArg</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommand_getDirectory.html'
+                                  title='clang_sys::clang_CompileCommand_getDirectory'>clang_CompileCommand_getDirectory</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommand_getMappedSourceContent.html'
+                                  title='clang_sys::clang_CompileCommand_getMappedSourceContent'>clang_CompileCommand_getMappedSourceContent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommand_getMappedSourcePath.html'
+                                  title='clang_sys::clang_CompileCommand_getMappedSourcePath'>clang_CompileCommand_getMappedSourcePath</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommand_getNumArgs.html'
+                                  title='clang_sys::clang_CompileCommand_getNumArgs'>clang_CompileCommand_getNumArgs</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommand_getNumMappedSources.html'
+                                  title='clang_sys::clang_CompileCommand_getNumMappedSources'>clang_CompileCommand_getNumMappedSources</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommands_dispose.html'
+                                  title='clang_sys::clang_CompileCommands_dispose'>clang_CompileCommands_dispose</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommands_getCommand.html'
+                                  title='clang_sys::clang_CompileCommands_getCommand'>clang_CompileCommands_getCommand</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_CompileCommands_getSize.html'
+                                  title='clang_sys::clang_CompileCommands_getSize'>clang_CompileCommands_getSize</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getArgument.html'
+                                  title='clang_sys::clang_Cursor_getArgument'>clang_Cursor_getArgument</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getBriefCommentText.html'
+                                  title='clang_sys::clang_Cursor_getBriefCommentText'>clang_Cursor_getBriefCommentText</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getCommentRange.html'
+                                  title='clang_sys::clang_Cursor_getCommentRange'>clang_Cursor_getCommentRange</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getModule.html'
+                                  title='clang_sys::clang_Cursor_getModule'>clang_Cursor_getModule</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getNumArguments.html'
+                                  title='clang_sys::clang_Cursor_getNumArguments'>clang_Cursor_getNumArguments</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getObjCDeclQualifiers.html'
+                                  title='clang_sys::clang_Cursor_getObjCDeclQualifiers'>clang_Cursor_getObjCDeclQualifiers</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getObjCPropertyAttributes.html'
+                                  title='clang_sys::clang_Cursor_getObjCPropertyAttributes'>clang_Cursor_getObjCPropertyAttributes</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getObjCSelectorIndex.html'
+                                  title='clang_sys::clang_Cursor_getObjCSelectorIndex'>clang_Cursor_getObjCSelectorIndex</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getRawCommentText.html'
+                                  title='clang_sys::clang_Cursor_getRawCommentText'>clang_Cursor_getRawCommentText</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getReceiverType.html'
+                                  title='clang_sys::clang_Cursor_getReceiverType'>clang_Cursor_getReceiverType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getSpellingNameRange.html'
+                                  title='clang_sys::clang_Cursor_getSpellingNameRange'>clang_Cursor_getSpellingNameRange</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_getTranslationUnit.html'
+                                  title='clang_sys::clang_Cursor_getTranslationUnit'>clang_Cursor_getTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_isBitField.html'
+                                  title='clang_sys::clang_Cursor_isBitField'>clang_Cursor_isBitField</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_isDynamicCall.html'
+                                  title='clang_sys::clang_Cursor_isDynamicCall'>clang_Cursor_isDynamicCall</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_isNull.html'
+                                  title='clang_sys::clang_Cursor_isNull'>clang_Cursor_isNull</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_isObjCOptional.html'
+                                  title='clang_sys::clang_Cursor_isObjCOptional'>clang_Cursor_isObjCOptional</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Cursor_isVariadic.html'
+                                  title='clang_sys::clang_Cursor_isVariadic'>clang_Cursor_isVariadic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_IndexAction_create.html'
+                                  title='clang_sys::clang_IndexAction_create'>clang_IndexAction_create</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_IndexAction_dispose.html'
+                                  title='clang_sys::clang_IndexAction_dispose'>clang_IndexAction_dispose</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Location_isFromMainFile.html'
+                                  title='clang_sys::clang_Location_isFromMainFile'>clang_Location_isFromMainFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Location_isInSystemHeader.html'
+                                  title='clang_sys::clang_Location_isInSystemHeader'>clang_Location_isInSystemHeader</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Module_getASTFile.html'
+                                  title='clang_sys::clang_Module_getASTFile'>clang_Module_getASTFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Module_getFullName.html'
+                                  title='clang_sys::clang_Module_getFullName'>clang_Module_getFullName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Module_getName.html'
+                                  title='clang_sys::clang_Module_getName'>clang_Module_getName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Module_getNumTopLevelHeaders.html'
+                                  title='clang_sys::clang_Module_getNumTopLevelHeaders'>clang_Module_getNumTopLevelHeaders</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Module_getParent.html'
+                                  title='clang_sys::clang_Module_getParent'>clang_Module_getParent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Module_getTopLevelHeader.html'
+                                  title='clang_sys::clang_Module_getTopLevelHeader'>clang_Module_getTopLevelHeader</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Module_isSystem.html'
+                                  title='clang_sys::clang_Module_isSystem'>clang_Module_isSystem</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Range_isNull.html'
+                                  title='clang_sys::clang_Range_isNull'>clang_Range_isNull</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Type_getAlignOf.html'
+                                  title='clang_sys::clang_Type_getAlignOf'>clang_Type_getAlignOf</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Type_getCXXRefQualifier.html'
+                                  title='clang_sys::clang_Type_getCXXRefQualifier'>clang_Type_getCXXRefQualifier</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Type_getClassType.html'
+                                  title='clang_sys::clang_Type_getClassType'>clang_Type_getClassType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Type_getNumTemplateArguments.html'
+                                  title='clang_sys::clang_Type_getNumTemplateArguments'>clang_Type_getNumTemplateArguments</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Type_getOffsetOf.html'
+                                  title='clang_sys::clang_Type_getOffsetOf'>clang_Type_getOffsetOf</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Type_getSizeOf.html'
+                                  title='clang_sys::clang_Type_getSizeOf'>clang_Type_getSizeOf</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_Type_getTemplateArgumentAsType.html'
+                                  title='clang_sys::clang_Type_getTemplateArgumentAsType'>clang_Type_getTemplateArgumentAsType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_annotateTokens.html'
+                                  title='clang_sys::clang_annotateTokens'>clang_annotateTokens</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_codeCompleteAt.html'
+                                  title='clang_sys::clang_codeCompleteAt'>clang_codeCompleteAt</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_codeCompleteGetContainerKind.html'
+                                  title='clang_sys::clang_codeCompleteGetContainerKind'>clang_codeCompleteGetContainerKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_codeCompleteGetContainerUSR.html'
+                                  title='clang_sys::clang_codeCompleteGetContainerUSR'>clang_codeCompleteGetContainerUSR</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_codeCompleteGetContexts.html'
+                                  title='clang_sys::clang_codeCompleteGetContexts'>clang_codeCompleteGetContexts</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_codeCompleteGetDiagnostic.html'
+                                  title='clang_sys::clang_codeCompleteGetDiagnostic'>clang_codeCompleteGetDiagnostic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_codeCompleteGetNumDiagnostics.html'
+                                  title='clang_sys::clang_codeCompleteGetNumDiagnostics'>clang_codeCompleteGetNumDiagnostics</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_codeCompleteGetObjCSelector.html'
+                                  title='clang_sys::clang_codeCompleteGetObjCSelector'>clang_codeCompleteGetObjCSelector</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_constructUSR_ObjCCategory.html'
+                                  title='clang_sys::clang_constructUSR_ObjCCategory'>clang_constructUSR_ObjCCategory</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_constructUSR_ObjCClass.html'
+                                  title='clang_sys::clang_constructUSR_ObjCClass'>clang_constructUSR_ObjCClass</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_constructUSR_ObjCIvar.html'
+                                  title='clang_sys::clang_constructUSR_ObjCIvar'>clang_constructUSR_ObjCIvar</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_constructUSR_ObjCMethod.html'
+                                  title='clang_sys::clang_constructUSR_ObjCMethod'>clang_constructUSR_ObjCMethod</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_constructUSR_ObjCProperty.html'
+                                  title='clang_sys::clang_constructUSR_ObjCProperty'>clang_constructUSR_ObjCProperty</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_constructUSR_ObjCProtocol.html'
+                                  title='clang_sys::clang_constructUSR_ObjCProtocol'>clang_constructUSR_ObjCProtocol</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_createCXCursorSet.html'
+                                  title='clang_sys::clang_createCXCursorSet'>clang_createCXCursorSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_createIndex.html'
+                                  title='clang_sys::clang_createIndex'>clang_createIndex</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_createTranslationUnit.html'
+                                  title='clang_sys::clang_createTranslationUnit'>clang_createTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_createTranslationUnit2.html'
+                                  title='clang_sys::clang_createTranslationUnit2'>clang_createTranslationUnit2</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_createTranslationUnitFromSourceFile.html'
+                                  title='clang_sys::clang_createTranslationUnitFromSourceFile'>clang_createTranslationUnitFromSourceFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_defaultCodeCompleteOptions.html'
+                                  title='clang_sys::clang_defaultCodeCompleteOptions'>clang_defaultCodeCompleteOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_defaultDiagnosticDisplayOptions.html'
+                                  title='clang_sys::clang_defaultDiagnosticDisplayOptions'>clang_defaultDiagnosticDisplayOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_defaultEditingTranslationUnitOptions.html'
+                                  title='clang_sys::clang_defaultEditingTranslationUnitOptions'>clang_defaultEditingTranslationUnitOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_defaultReparseOptions.html'
+                                  title='clang_sys::clang_defaultReparseOptions'>clang_defaultReparseOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_defaultSaveOptions.html'
+                                  title='clang_sys::clang_defaultSaveOptions'>clang_defaultSaveOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeCXCursorSet.html'
+                                  title='clang_sys::clang_disposeCXCursorSet'>clang_disposeCXCursorSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeCXPlatformAvailability.html'
+                                  title='clang_sys::clang_disposeCXPlatformAvailability'>clang_disposeCXPlatformAvailability</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeCXTUResourceUsage.html'
+                                  title='clang_sys::clang_disposeCXTUResourceUsage'>clang_disposeCXTUResourceUsage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeCodeCompleteResults.html'
+                                  title='clang_sys::clang_disposeCodeCompleteResults'>clang_disposeCodeCompleteResults</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeDiagnostic.html'
+                                  title='clang_sys::clang_disposeDiagnostic'>clang_disposeDiagnostic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeDiagnosticSet.html'
+                                  title='clang_sys::clang_disposeDiagnosticSet'>clang_disposeDiagnosticSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeIndex.html'
+                                  title='clang_sys::clang_disposeIndex'>clang_disposeIndex</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeOverriddenCursors.html'
+                                  title='clang_sys::clang_disposeOverriddenCursors'>clang_disposeOverriddenCursors</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeSourceRangeList.html'
+                                  title='clang_sys::clang_disposeSourceRangeList'>clang_disposeSourceRangeList</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeString.html'
+                                  title='clang_sys::clang_disposeString'>clang_disposeString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeTokens.html'
+                                  title='clang_sys::clang_disposeTokens'>clang_disposeTokens</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_disposeTranslationUnit.html'
+                                  title='clang_sys::clang_disposeTranslationUnit'>clang_disposeTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_enableStackTraces.html'
+                                  title='clang_sys::clang_enableStackTraces'>clang_enableStackTraces</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_equalCursors.html'
+                                  title='clang_sys::clang_equalCursors'>clang_equalCursors</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_equalLocations.html'
+                                  title='clang_sys::clang_equalLocations'>clang_equalLocations</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_equalRanges.html'
+                                  title='clang_sys::clang_equalRanges'>clang_equalRanges</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_equalTypes.html'
+                                  title='clang_sys::clang_equalTypes'>clang_equalTypes</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_executeOnThread.html'
+                                  title='clang_sys::clang_executeOnThread'>clang_executeOnThread</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_findIncludesInFile.html'
+                                  title='clang_sys::clang_findIncludesInFile'>clang_findIncludesInFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_findReferencesInFile.html'
+                                  title='clang_sys::clang_findReferencesInFile'>clang_findReferencesInFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_formatDiagnostic.html'
+                                  title='clang_sys::clang_formatDiagnostic'>clang_formatDiagnostic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_free.html'
+                                  title='clang_sys::clang_free'>clang_free</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getArgType.html'
+                                  title='clang_sys::clang_getArgType'>clang_getArgType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getArrayElementType.html'
+                                  title='clang_sys::clang_getArrayElementType'>clang_getArrayElementType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getArraySize.html'
+                                  title='clang_sys::clang_getArraySize'>clang_getArraySize</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCString.html'
+                                  title='clang_sys::clang_getCString'>clang_getCString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCXTUResourceUsage.html'
+                                  title='clang_sys::clang_getCXTUResourceUsage'>clang_getCXTUResourceUsage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCXXAccessSpecifier.html'
+                                  title='clang_sys::clang_getCXXAccessSpecifier'>clang_getCXXAccessSpecifier</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCanonicalCursor.html'
+                                  title='clang_sys::clang_getCanonicalCursor'>clang_getCanonicalCursor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCanonicalType.html'
+                                  title='clang_sys::clang_getCanonicalType'>clang_getCanonicalType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getChildDiagnostics.html'
+                                  title='clang_sys::clang_getChildDiagnostics'>clang_getChildDiagnostics</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getClangVersion.html'
+                                  title='clang_sys::clang_getClangVersion'>clang_getClangVersion</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionAnnotation.html'
+                                  title='clang_sys::clang_getCompletionAnnotation'>clang_getCompletionAnnotation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionAvailability.html'
+                                  title='clang_sys::clang_getCompletionAvailability'>clang_getCompletionAvailability</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionBriefComment.html'
+                                  title='clang_sys::clang_getCompletionBriefComment'>clang_getCompletionBriefComment</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionChunkCompletionString.html'
+                                  title='clang_sys::clang_getCompletionChunkCompletionString'>clang_getCompletionChunkCompletionString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionChunkKind.html'
+                                  title='clang_sys::clang_getCompletionChunkKind'>clang_getCompletionChunkKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionChunkText.html'
+                                  title='clang_sys::clang_getCompletionChunkText'>clang_getCompletionChunkText</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionNumAnnotations.html'
+                                  title='clang_sys::clang_getCompletionNumAnnotations'>clang_getCompletionNumAnnotations</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionParent.html'
+                                  title='clang_sys::clang_getCompletionParent'>clang_getCompletionParent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCompletionPriority.html'
+                                  title='clang_sys::clang_getCompletionPriority'>clang_getCompletionPriority</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursor.html'
+                                  title='clang_sys::clang_getCursor'>clang_getCursor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorAvailability.html'
+                                  title='clang_sys::clang_getCursorAvailability'>clang_getCursorAvailability</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorCompletionString.html'
+                                  title='clang_sys::clang_getCursorCompletionString'>clang_getCursorCompletionString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorDefinition.html'
+                                  title='clang_sys::clang_getCursorDefinition'>clang_getCursorDefinition</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorDisplayName.html'
+                                  title='clang_sys::clang_getCursorDisplayName'>clang_getCursorDisplayName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorExtent.html'
+                                  title='clang_sys::clang_getCursorExtent'>clang_getCursorExtent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorKind.html'
+                                  title='clang_sys::clang_getCursorKind'>clang_getCursorKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorKindSpelling.html'
+                                  title='clang_sys::clang_getCursorKindSpelling'>clang_getCursorKindSpelling</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorLanguage.html'
+                                  title='clang_sys::clang_getCursorLanguage'>clang_getCursorLanguage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorLexicalParent.html'
+                                  title='clang_sys::clang_getCursorLexicalParent'>clang_getCursorLexicalParent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorLinkage.html'
+                                  title='clang_sys::clang_getCursorLinkage'>clang_getCursorLinkage</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorLocation.html'
+                                  title='clang_sys::clang_getCursorLocation'>clang_getCursorLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorPlatformAvailability.html'
+                                  title='clang_sys::clang_getCursorPlatformAvailability'>clang_getCursorPlatformAvailability</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorReferenceNameRange.html'
+                                  title='clang_sys::clang_getCursorReferenceNameRange'>clang_getCursorReferenceNameRange</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorReferenced.html'
+                                  title='clang_sys::clang_getCursorReferenced'>clang_getCursorReferenced</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorResultType.html'
+                                  title='clang_sys::clang_getCursorResultType'>clang_getCursorResultType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorSemanticParent.html'
+                                  title='clang_sys::clang_getCursorSemanticParent'>clang_getCursorSemanticParent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorSpelling.html'
+                                  title='clang_sys::clang_getCursorSpelling'>clang_getCursorSpelling</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorType.html'
+                                  title='clang_sys::clang_getCursorType'>clang_getCursorType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getCursorUSR.html'
+                                  title='clang_sys::clang_getCursorUSR'>clang_getCursorUSR</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDeclObjCTypeEncoding.html'
+                                  title='clang_sys::clang_getDeclObjCTypeEncoding'>clang_getDeclObjCTypeEncoding</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDefinitionSpellingAndExtent.html'
+                                  title='clang_sys::clang_getDefinitionSpellingAndExtent'>clang_getDefinitionSpellingAndExtent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnostic.html'
+                                  title='clang_sys::clang_getDiagnostic'>clang_getDiagnostic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticCategory.html'
+                                  title='clang_sys::clang_getDiagnosticCategory'>clang_getDiagnosticCategory</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticCategoryName.html'
+                                  title='clang_sys::clang_getDiagnosticCategoryName'>clang_getDiagnosticCategoryName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticCategoryText.html'
+                                  title='clang_sys::clang_getDiagnosticCategoryText'>clang_getDiagnosticCategoryText</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticFixIt.html'
+                                  title='clang_sys::clang_getDiagnosticFixIt'>clang_getDiagnosticFixIt</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticInSet.html'
+                                  title='clang_sys::clang_getDiagnosticInSet'>clang_getDiagnosticInSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticLocation.html'
+                                  title='clang_sys::clang_getDiagnosticLocation'>clang_getDiagnosticLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticNumFixIts.html'
+                                  title='clang_sys::clang_getDiagnosticNumFixIts'>clang_getDiagnosticNumFixIts</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticNumRanges.html'
+                                  title='clang_sys::clang_getDiagnosticNumRanges'>clang_getDiagnosticNumRanges</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticOption.html'
+                                  title='clang_sys::clang_getDiagnosticOption'>clang_getDiagnosticOption</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticRange.html'
+                                  title='clang_sys::clang_getDiagnosticRange'>clang_getDiagnosticRange</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticSetFromTU.html'
+                                  title='clang_sys::clang_getDiagnosticSetFromTU'>clang_getDiagnosticSetFromTU</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticSeverity.html'
+                                  title='clang_sys::clang_getDiagnosticSeverity'>clang_getDiagnosticSeverity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getDiagnosticSpelling.html'
+                                  title='clang_sys::clang_getDiagnosticSpelling'>clang_getDiagnosticSpelling</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getElementType.html'
+                                  title='clang_sys::clang_getElementType'>clang_getElementType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getEnumConstantDeclUnsignedValue.html'
+                                  title='clang_sys::clang_getEnumConstantDeclUnsignedValue'>clang_getEnumConstantDeclUnsignedValue</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getEnumConstantDeclValue.html'
+                                  title='clang_sys::clang_getEnumConstantDeclValue'>clang_getEnumConstantDeclValue</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getEnumDeclIntegerType.html'
+                                  title='clang_sys::clang_getEnumDeclIntegerType'>clang_getEnumDeclIntegerType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getExpansionLocation.html'
+                                  title='clang_sys::clang_getExpansionLocation'>clang_getExpansionLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getFieldDeclBitWidth.html'
+                                  title='clang_sys::clang_getFieldDeclBitWidth'>clang_getFieldDeclBitWidth</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getFile.html'
+                                  title='clang_sys::clang_getFile'>clang_getFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getFileLocation.html'
+                                  title='clang_sys::clang_getFileLocation'>clang_getFileLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getFileName.html'
+                                  title='clang_sys::clang_getFileName'>clang_getFileName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getFileTime.html'
+                                  title='clang_sys::clang_getFileTime'>clang_getFileTime</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getFileUniqueID.html'
+                                  title='clang_sys::clang_getFileUniqueID'>clang_getFileUniqueID</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getFunctionTypeCallingConv.html'
+                                  title='clang_sys::clang_getFunctionTypeCallingConv'>clang_getFunctionTypeCallingConv</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getIBOutletCollectionType.html'
+                                  title='clang_sys::clang_getIBOutletCollectionType'>clang_getIBOutletCollectionType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getIncludedFile.html'
+                                  title='clang_sys::clang_getIncludedFile'>clang_getIncludedFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getInclusions.html'
+                                  title='clang_sys::clang_getInclusions'>clang_getInclusions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getInstantiationLocation.html'
+                                  title='clang_sys::clang_getInstantiationLocation'>clang_getInstantiationLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getLocation.html'
+                                  title='clang_sys::clang_getLocation'>clang_getLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getLocationForOffset.html'
+                                  title='clang_sys::clang_getLocationForOffset'>clang_getLocationForOffset</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getModuleForFile.html'
+                                  title='clang_sys::clang_getModuleForFile'>clang_getModuleForFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNullCursor.html'
+                                  title='clang_sys::clang_getNullCursor'>clang_getNullCursor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNullLocation.html'
+                                  title='clang_sys::clang_getNullLocation'>clang_getNullLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNullRange.html'
+                                  title='clang_sys::clang_getNullRange'>clang_getNullRange</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNumArgTypes.html'
+                                  title='clang_sys::clang_getNumArgTypes'>clang_getNumArgTypes</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNumCompletionChunks.html'
+                                  title='clang_sys::clang_getNumCompletionChunks'>clang_getNumCompletionChunks</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNumDiagnostics.html'
+                                  title='clang_sys::clang_getNumDiagnostics'>clang_getNumDiagnostics</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNumDiagnosticsInSet.html'
+                                  title='clang_sys::clang_getNumDiagnosticsInSet'>clang_getNumDiagnosticsInSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNumElements.html'
+                                  title='clang_sys::clang_getNumElements'>clang_getNumElements</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getNumOverloadedDecls.html'
+                                  title='clang_sys::clang_getNumOverloadedDecls'>clang_getNumOverloadedDecls</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getOverloadedDecl.html'
+                                  title='clang_sys::clang_getOverloadedDecl'>clang_getOverloadedDecl</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getOverriddenCursors.html'
+                                  title='clang_sys::clang_getOverriddenCursors'>clang_getOverriddenCursors</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getPointeeType.html'
+                                  title='clang_sys::clang_getPointeeType'>clang_getPointeeType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getPresumedLocation.html'
+                                  title='clang_sys::clang_getPresumedLocation'>clang_getPresumedLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getRange.html'
+                                  title='clang_sys::clang_getRange'>clang_getRange</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getRangeEnd.html'
+                                  title='clang_sys::clang_getRangeEnd'>clang_getRangeEnd</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getRangeStart.html'
+                                  title='clang_sys::clang_getRangeStart'>clang_getRangeStart</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getRemappings.html'
+                                  title='clang_sys::clang_getRemappings'>clang_getRemappings</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getRemappingsFromFileList.html'
+                                  title='clang_sys::clang_getRemappingsFromFileList'>clang_getRemappingsFromFileList</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getResultType.html'
+                                  title='clang_sys::clang_getResultType'>clang_getResultType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getSkippedRanges.html'
+                                  title='clang_sys::clang_getSkippedRanges'>clang_getSkippedRanges</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getSpecializedCursorTemplate.html'
+                                  title='clang_sys::clang_getSpecializedCursorTemplate'>clang_getSpecializedCursorTemplate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getSpellingLocation.html'
+                                  title='clang_sys::clang_getSpellingLocation'>clang_getSpellingLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTUResourceUsageName.html'
+                                  title='clang_sys::clang_getTUResourceUsageName'>clang_getTUResourceUsageName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTemplateCursorKind.html'
+                                  title='clang_sys::clang_getTemplateCursorKind'>clang_getTemplateCursorKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTokenExtent.html'
+                                  title='clang_sys::clang_getTokenExtent'>clang_getTokenExtent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTokenKind.html'
+                                  title='clang_sys::clang_getTokenKind'>clang_getTokenKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTokenLocation.html'
+                                  title='clang_sys::clang_getTokenLocation'>clang_getTokenLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTokenSpelling.html'
+                                  title='clang_sys::clang_getTokenSpelling'>clang_getTokenSpelling</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTranslationUnitCursor.html'
+                                  title='clang_sys::clang_getTranslationUnitCursor'>clang_getTranslationUnitCursor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTranslationUnitSpelling.html'
+                                  title='clang_sys::clang_getTranslationUnitSpelling'>clang_getTranslationUnitSpelling</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTypeDeclaration.html'
+                                  title='clang_sys::clang_getTypeDeclaration'>clang_getTypeDeclaration</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTypeKindSpelling.html'
+                                  title='clang_sys::clang_getTypeKindSpelling'>clang_getTypeKindSpelling</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTypeSpelling.html'
+                                  title='clang_sys::clang_getTypeSpelling'>clang_getTypeSpelling</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_getTypedefDeclUnderlyingType.html'
+                                  title='clang_sys::clang_getTypedefDeclUnderlyingType'>clang_getTypedefDeclUnderlyingType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_hashCursor.html'
+                                  title='clang_sys::clang_hashCursor'>clang_hashCursor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_indexLoc_getCXSourceLocation.html'
+                                  title='clang_sys::clang_indexLoc_getCXSourceLocation'>clang_indexLoc_getCXSourceLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_indexLoc_getFileLocation.html'
+                                  title='clang_sys::clang_indexLoc_getFileLocation'>clang_indexLoc_getFileLocation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_indexSourceFile.html'
+                                  title='clang_sys::clang_indexSourceFile'>clang_indexSourceFile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_indexTranslationUnit.html'
+                                  title='clang_sys::clang_indexTranslationUnit'>clang_indexTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getCXXClassDeclInfo.html'
+                                  title='clang_sys::clang_index_getCXXClassDeclInfo'>clang_index_getCXXClassDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getClientContainer.html'
+                                  title='clang_sys::clang_index_getClientContainer'>clang_index_getClientContainer</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getClientEntity.html'
+                                  title='clang_sys::clang_index_getClientEntity'>clang_index_getClientEntity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getIBOutletCollectionAttrInfo.html'
+                                  title='clang_sys::clang_index_getIBOutletCollectionAttrInfo'>clang_index_getIBOutletCollectionAttrInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getObjCCategoryDeclInfo.html'
+                                  title='clang_sys::clang_index_getObjCCategoryDeclInfo'>clang_index_getObjCCategoryDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getObjCContainerDeclInfo.html'
+                                  title='clang_sys::clang_index_getObjCContainerDeclInfo'>clang_index_getObjCContainerDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getObjCInterfaceDeclInfo.html'
+                                  title='clang_sys::clang_index_getObjCInterfaceDeclInfo'>clang_index_getObjCInterfaceDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getObjCPropertyDeclInfo.html'
+                                  title='clang_sys::clang_index_getObjCPropertyDeclInfo'>clang_index_getObjCPropertyDeclInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_getObjCProtocolRefListInfo.html'
+                                  title='clang_sys::clang_index_getObjCProtocolRefListInfo'>clang_index_getObjCProtocolRefListInfo</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_isEntityObjCContainerKind.html'
+                                  title='clang_sys::clang_index_isEntityObjCContainerKind'>clang_index_isEntityObjCContainerKind</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_setClientContainer.html'
+                                  title='clang_sys::clang_index_setClientContainer'>clang_index_setClientContainer</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_index_setClientEntity.html'
+                                  title='clang_sys::clang_index_setClientEntity'>clang_index_setClientEntity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isAttribute.html'
+                                  title='clang_sys::clang_isAttribute'>clang_isAttribute</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isConstQualifiedType.html'
+                                  title='clang_sys::clang_isConstQualifiedType'>clang_isConstQualifiedType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isCursorDefinition.html'
+                                  title='clang_sys::clang_isCursorDefinition'>clang_isCursorDefinition</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isDeclaration.html'
+                                  title='clang_sys::clang_isDeclaration'>clang_isDeclaration</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isExpression.html'
+                                  title='clang_sys::clang_isExpression'>clang_isExpression</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isFileMultipleIncludeGuarded.html'
+                                  title='clang_sys::clang_isFileMultipleIncludeGuarded'>clang_isFileMultipleIncludeGuarded</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isFunctionTypeVariadic.html'
+                                  title='clang_sys::clang_isFunctionTypeVariadic'>clang_isFunctionTypeVariadic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isInvalid.html'
+                                  title='clang_sys::clang_isInvalid'>clang_isInvalid</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isPODType.html'
+                                  title='clang_sys::clang_isPODType'>clang_isPODType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isPreprocessing.html'
+                                  title='clang_sys::clang_isPreprocessing'>clang_isPreprocessing</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isReference.html'
+                                  title='clang_sys::clang_isReference'>clang_isReference</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isRestrictQualifiedType.html'
+                                  title='clang_sys::clang_isRestrictQualifiedType'>clang_isRestrictQualifiedType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isStatement.html'
+                                  title='clang_sys::clang_isStatement'>clang_isStatement</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isTranslationUnit.html'
+                                  title='clang_sys::clang_isTranslationUnit'>clang_isTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isUnexposed.html'
+                                  title='clang_sys::clang_isUnexposed'>clang_isUnexposed</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isVirtualBase.html'
+                                  title='clang_sys::clang_isVirtualBase'>clang_isVirtualBase</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_isVolatileQualifiedType.html'
+                                  title='clang_sys::clang_isVolatileQualifiedType'>clang_isVolatileQualifiedType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_loadDiagnostics.html'
+                                  title='clang_sys::clang_loadDiagnostics'>clang_loadDiagnostics</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_parseTranslationUnit.html'
+                                  title='clang_sys::clang_parseTranslationUnit'>clang_parseTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_parseTranslationUnit2.html'
+                                  title='clang_sys::clang_parseTranslationUnit2'>clang_parseTranslationUnit2</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_remap_dispose.html'
+                                  title='clang_sys::clang_remap_dispose'>clang_remap_dispose</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_remap_getFilenames.html'
+                                  title='clang_sys::clang_remap_getFilenames'>clang_remap_getFilenames</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_remap_getNumFiles.html'
+                                  title='clang_sys::clang_remap_getNumFiles'>clang_remap_getNumFiles</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_reparseTranslationUnit.html'
+                                  title='clang_sys::clang_reparseTranslationUnit'>clang_reparseTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_saveTranslationUnit.html'
+                                  title='clang_sys::clang_saveTranslationUnit'>clang_saveTranslationUnit</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_sortCodeCompletionResults.html'
+                                  title='clang_sys::clang_sortCodeCompletionResults'>clang_sortCodeCompletionResults</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_toggleCrashRecovery.html'
+                                  title='clang_sys::clang_toggleCrashRecovery'>clang_toggleCrashRecovery</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_tokenize.html'
+                                  title='clang_sys::clang_tokenize'>clang_tokenize</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.clang_visitChildren.html'
+                                  title='clang_sys::clang_visitChildren'>clang_visitChildren</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CXClientData.html'
+                                  title='clang_sys::CXClientData'>CXClientData</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CXCursorVisitor.html'
+                                  title='clang_sys::CXCursorVisitor'>CXCursorVisitor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CXInclusionVisitor.html'
+                                  title='clang_sys::CXInclusionVisitor'>CXInclusionVisitor</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "clang_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

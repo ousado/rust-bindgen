@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CXCursorKind` enum in crate `clang_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CXCursorKind">
+
+    <title>clang_sys::CXCursorKind - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>clang_sys</a></p><script>window.sidebarCurrent = {name: 'CXCursorKind', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>clang_sys</a>::<wbr><a class='enum' href=''>CXCursorKind</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-349' class='srclink' href='../src/clang_sys/lib.rs.html#145-359' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum CXCursorKind {
+    UnexposedDecl,
+    StructDecl,
+    UnionDecl,
+    ClassDecl,
+    EnumDecl,
+    FieldDecl,
+    EnumConstantDecl,
+    FunctionDecl,
+    VarDecl,
+    ParmDecl,
+    ObjCInterfaceDecl,
+    ObjCCategoryDecl,
+    ObjCProtocolDecl,
+    ObjCPropertyDecl,
+    ObjCIvarDecl,
+    ObjCInstanceMethodDecl,
+    ObjCClassMethodDecl,
+    ObjCImplementationDecl,
+    ObjCCategoryImplDecl,
+    TypedefDecl,
+    CXXMethod,
+    Namespace,
+    LinkageSpec,
+    Constructor,
+    Destructor,
+    ConversionFunction,
+    TemplateTypeParameter,
+    NonTypeTemplateParameter,
+    TemplateTemplateParameter,
+    FunctionTemplate,
+    ClassTemplate,
+    ClassTemplatePartialSpecialization,
+    NamespaceAlias,
+    UsingDirective,
+    UsingDeclaration,
+    TypeAliasDecl,
+    ObjCSynthesizeDecl,
+    ObjCDynamicDecl,
+    CXXAccessSpecifier,
+    ObjCSuperClassRef,
+    ObjCProtocolRef,
+    ObjCClassRef,
+    TypeRef,
+    CXXBaseSpecifier,
+    TemplateRef,
+    NamespaceRef,
+    MemberRef,
+    LabelRef,
+    OverloadedDeclRef,
+    VariableRef,
+    InvalidFile,
+    NoDeclFound,
+    NotImplemented,
+    InvalidCode,
+    UnexposedExpr,
+    DeclRefExpr,
+    MemberRefExpr,
+    CallExpr,
+    ObjCMessageExpr,
+    BlockExpr,
+    IntegerLiteral,
+    FloatingLiteral,
+    ImaginaryLiteral,
+    StringLiteral,
+    CharacterLiteral,
+    ParenExpr,
+    UnaryOperator,
+    ArraySubscriptExpr,
+    BinaryOperator,
+    CompoundAssignOperator,
+    ConditionalOperator,
+    CStyleCastExpr,
+    CompoundLiteralExpr,
+    InitListExpr,
+    AddrLabelExpr,
+    StmtExpr,
+    GenericSelectionExpr,
+    GNUNullExpr,
+    CXXStaticCastExpr,
+    CXXDynamicCastExpr,
+    CXXReinterpretCastExpr,
+    CXXConstCastExpr,
+    CXXFunctionalCastExpr,
+    CXXTypeidExpr,
+    CXXBoolLiteralExpr,
+    CXXNullPtrLiteralExpr,
+    CXXThisExpr,
+    CXXThrowExpr,
+    CXXNewExpr,
+    CXXDeleteExpr,
+    UnaryExpr,
+    ObjCStringLiteral,
+    ObjCEncodeExpr,
+    ObjCSelectorExpr,
+    ObjCProtocolExpr,
+    ObjCBridgedCastExpr,
+    PackExpansionExpr,
+    SizeOfPackExpr,
+    LambdaExpr,
+    ObjCBoolLiteralExpr,
+    ObjCSelfExpr,
+    UnexposedStmt,
+    LabelStmt,
+    CompoundStmt,
+    CaseStmt,
+    DefaultStmt,
+    IfStmt,
+    SwitchStmt,
+    WhileStmt,
+    DoStmt,
+    ForStmt,
+    GotoStmt,
+    IndirectGotoStmt,
+    ContinueStmt,
+    BreakStmt,
+    ReturnStmt,
+    AsmStmt,
+    ObjCAtTryStmt,
+    ObjCAtCatchStmt,
+    ObjCAtFinallyStmt,
+    ObjCAtThrowStmt,
+    ObjCAtSynchronizedStmt,
+    ObjCAutoreleasePoolStmt,
+    ObjCForCollectionStmt,
+    CXXCatchStmt,
+    CXXTryStmt,
+    CXXForRangeStmt,
+    SEHTryStmt,
+    SEHExceptStmt,
+    SEHFinallyStmt,
+    MSAsmStmt,
+    NullStmt,
+    DeclStmt,
+    OMPParallelDirective,
+    OMPSimdDirective,
+    OMPForDirective,
+    OMPSectionsDirective,
+    OMPSectionDirective,
+    OMPSingleDirective,
+    OMPParallelForDirective,
+    OMPParallelSectionsDirective,
+    OMPTaskDirective,
+    OMPMasterDirective,
+    OMPCriticalDirective,
+    OMPTaskyieldDirective,
+    OMPBarrierDirective,
+    OMPTaskwaitDirective,
+    OMPFlushDirective,
+    SEHLeaveStmt,
+    TranslationUnit,
+    UnexposedAttr,
+    IBActionAttr,
+    IBOutletAttr,
+    IBOutletCollectionAttr,
+    CXXFinalAttr,
+    CXXOverrideAttr,
+    AnnotateAttr,
+    AsmLabelAttr,
+    PackedAttr,
+    PureAttr,
+    ConstAttr,
+    NoDuplicateAttr,
+    CUDAConstantAttr,
+    CUDADeviceAttr,
+    CUDAGlobalAttr,
+    CUDAHostAttr,
+    PreprocessingDirective,
+    MacroDefinition,
+    MacroExpansion,
+    InclusionDirective,
+    ModuleImportDecl,
+}</pre><h2 class='variants'>Variants</h2>
+<table class='variants_table'><tr><td id='variant.UnexposedDecl'><code>UnexposedDecl</code></td><td></td><td></td></tr><tr><td id='variant.StructDecl'><code>StructDecl</code></td><td></td><td></td></tr><tr><td id='variant.UnionDecl'><code>UnionDecl</code></td><td></td><td></td></tr><tr><td id='variant.ClassDecl'><code>ClassDecl</code></td><td></td><td></td></tr><tr><td id='variant.EnumDecl'><code>EnumDecl</code></td><td></td><td></td></tr><tr><td id='variant.FieldDecl'><code>FieldDecl</code></td><td></td><td></td></tr><tr><td id='variant.EnumConstantDecl'><code>EnumConstantDecl</code></td><td></td><td></td></tr><tr><td id='variant.FunctionDecl'><code>FunctionDecl</code></td><td></td><td></td></tr><tr><td id='variant.VarDecl'><code>VarDecl</code></td><td></td><td></td></tr><tr><td id='variant.ParmDecl'><code>ParmDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCInterfaceDecl'><code>ObjCInterfaceDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCCategoryDecl'><code>ObjCCategoryDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCProtocolDecl'><code>ObjCProtocolDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCPropertyDecl'><code>ObjCPropertyDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCIvarDecl'><code>ObjCIvarDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCInstanceMethodDecl'><code>ObjCInstanceMethodDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCClassMethodDecl'><code>ObjCClassMethodDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCImplementationDecl'><code>ObjCImplementationDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCCategoryImplDecl'><code>ObjCCategoryImplDecl</code></td><td></td><td></td></tr><tr><td id='variant.TypedefDecl'><code>TypedefDecl</code></td><td></td><td></td></tr><tr><td id='variant.CXXMethod'><code>CXXMethod</code></td><td></td><td></td></tr><tr><td id='variant.Namespace'><code>Namespace</code></td><td></td><td></td></tr><tr><td id='variant.LinkageSpec'><code>LinkageSpec</code></td><td></td><td></td></tr><tr><td id='variant.Constructor'><code>Constructor</code></td><td></td><td></td></tr><tr><td id='variant.Destructor'><code>Destructor</code></td><td></td><td></td></tr><tr><td id='variant.ConversionFunction'><code>ConversionFunction</code></td><td></td><td></td></tr><tr><td id='variant.TemplateTypeParameter'><code>TemplateTypeParameter</code></td><td></td><td></td></tr><tr><td id='variant.NonTypeTemplateParameter'><code>NonTypeTemplateParameter</code></td><td></td><td></td></tr><tr><td id='variant.TemplateTemplateParameter'><code>TemplateTemplateParameter</code></td><td></td><td></td></tr><tr><td id='variant.FunctionTemplate'><code>FunctionTemplate</code></td><td></td><td></td></tr><tr><td id='variant.ClassTemplate'><code>ClassTemplate</code></td><td></td><td></td></tr><tr><td id='variant.ClassTemplatePartialSpecialization'><code>ClassTemplatePartialSpecialization</code></td><td></td><td></td></tr><tr><td id='variant.NamespaceAlias'><code>NamespaceAlias</code></td><td></td><td></td></tr><tr><td id='variant.UsingDirective'><code>UsingDirective</code></td><td></td><td></td></tr><tr><td id='variant.UsingDeclaration'><code>UsingDeclaration</code></td><td></td><td></td></tr><tr><td id='variant.TypeAliasDecl'><code>TypeAliasDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCSynthesizeDecl'><code>ObjCSynthesizeDecl</code></td><td></td><td></td></tr><tr><td id='variant.ObjCDynamicDecl'><code>ObjCDynamicDecl</code></td><td></td><td></td></tr><tr><td id='variant.CXXAccessSpecifier'><code>CXXAccessSpecifier</code></td><td></td><td></td></tr><tr><td id='variant.ObjCSuperClassRef'><code>ObjCSuperClassRef</code></td><td></td><td></td></tr><tr><td id='variant.ObjCProtocolRef'><code>ObjCProtocolRef</code></td><td></td><td></td></tr><tr><td id='variant.ObjCClassRef'><code>ObjCClassRef</code></td><td></td><td></td></tr><tr><td id='variant.TypeRef'><code>TypeRef</code></td><td></td><td></td></tr><tr><td id='variant.CXXBaseSpecifier'><code>CXXBaseSpecifier</code></td><td></td><td></td></tr><tr><td id='variant.TemplateRef'><code>TemplateRef</code></td><td></td><td></td></tr><tr><td id='variant.NamespaceRef'><code>NamespaceRef</code></td><td></td><td></td></tr><tr><td id='variant.MemberRef'><code>MemberRef</code></td><td></td><td></td></tr><tr><td id='variant.LabelRef'><code>LabelRef</code></td><td></td><td></td></tr><tr><td id='variant.OverloadedDeclRef'><code>OverloadedDeclRef</code></td><td></td><td></td></tr><tr><td id='variant.VariableRef'><code>VariableRef</code></td><td></td><td></td></tr><tr><td id='variant.InvalidFile'><code>InvalidFile</code></td><td></td><td></td></tr><tr><td id='variant.NoDeclFound'><code>NoDeclFound</code></td><td></td><td></td></tr><tr><td id='variant.NotImplemented'><code>NotImplemented</code></td><td></td><td></td></tr><tr><td id='variant.InvalidCode'><code>InvalidCode</code></td><td></td><td></td></tr><tr><td id='variant.UnexposedExpr'><code>UnexposedExpr</code></td><td></td><td></td></tr><tr><td id='variant.DeclRefExpr'><code>DeclRefExpr</code></td><td></td><td></td></tr><tr><td id='variant.MemberRefExpr'><code>MemberRefExpr</code></td><td></td><td></td></tr><tr><td id='variant.CallExpr'><code>CallExpr</code></td><td></td><td></td></tr><tr><td id='variant.ObjCMessageExpr'><code>ObjCMessageExpr</code></td><td></td><td></td></tr><tr><td id='variant.BlockExpr'><code>BlockExpr</code></td><td></td><td></td></tr><tr><td id='variant.IntegerLiteral'><code>IntegerLiteral</code></td><td></td><td></td></tr><tr><td id='variant.FloatingLiteral'><code>FloatingLiteral</code></td><td></td><td></td></tr><tr><td id='variant.ImaginaryLiteral'><code>ImaginaryLiteral</code></td><td></td><td></td></tr><tr><td id='variant.StringLiteral'><code>StringLiteral</code></td><td></td><td></td></tr><tr><td id='variant.CharacterLiteral'><code>CharacterLiteral</code></td><td></td><td></td></tr><tr><td id='variant.ParenExpr'><code>ParenExpr</code></td><td></td><td></td></tr><tr><td id='variant.UnaryOperator'><code>UnaryOperator</code></td><td></td><td></td></tr><tr><td id='variant.ArraySubscriptExpr'><code>ArraySubscriptExpr</code></td><td></td><td></td></tr><tr><td id='variant.BinaryOperator'><code>BinaryOperator</code></td><td></td><td></td></tr><tr><td id='variant.CompoundAssignOperator'><code>CompoundAssignOperator</code></td><td></td><td></td></tr><tr><td id='variant.ConditionalOperator'><code>ConditionalOperator</code></td><td></td><td></td></tr><tr><td id='variant.CStyleCastExpr'><code>CStyleCastExpr</code></td><td></td><td></td></tr><tr><td id='variant.CompoundLiteralExpr'><code>CompoundLiteralExpr</code></td><td></td><td></td></tr><tr><td id='variant.InitListExpr'><code>InitListExpr</code></td><td></td><td></td></tr><tr><td id='variant.AddrLabelExpr'><code>AddrLabelExpr</code></td><td></td><td></td></tr><tr><td id='variant.StmtExpr'><code>StmtExpr</code></td><td></td><td></td></tr><tr><td id='variant.GenericSelectionExpr'><code>GenericSelectionExpr</code></td><td></td><td></td></tr><tr><td id='variant.GNUNullExpr'><code>GNUNullExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXStaticCastExpr'><code>CXXStaticCastExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXDynamicCastExpr'><code>CXXDynamicCastExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXReinterpretCastExpr'><code>CXXReinterpretCastExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXConstCastExpr'><code>CXXConstCastExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXFunctionalCastExpr'><code>CXXFunctionalCastExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXTypeidExpr'><code>CXXTypeidExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXBoolLiteralExpr'><code>CXXBoolLiteralExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXNullPtrLiteralExpr'><code>CXXNullPtrLiteralExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXThisExpr'><code>CXXThisExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXThrowExpr'><code>CXXThrowExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXNewExpr'><code>CXXNewExpr</code></td><td></td><td></td></tr><tr><td id='variant.CXXDeleteExpr'><code>CXXDeleteExpr</code></td><td></td><td></td></tr><tr><td id='variant.UnaryExpr'><code>UnaryExpr</code></td><td></td><td></td></tr><tr><td id='variant.ObjCStringLiteral'><code>ObjCStringLiteral</code></td><td></td><td></td></tr><tr><td id='variant.ObjCEncodeExpr'><code>ObjCEncodeExpr</code></td><td></td><td></td></tr><tr><td id='variant.ObjCSelectorExpr'><code>ObjCSelectorExpr</code></td><td></td><td></td></tr><tr><td id='variant.ObjCProtocolExpr'><code>ObjCProtocolExpr</code></td><td></td><td></td></tr><tr><td id='variant.ObjCBridgedCastExpr'><code>ObjCBridgedCastExpr</code></td><td></td><td></td></tr><tr><td id='variant.PackExpansionExpr'><code>PackExpansionExpr</code></td><td></td><td></td></tr><tr><td id='variant.SizeOfPackExpr'><code>SizeOfPackExpr</code></td><td></td><td></td></tr><tr><td id='variant.LambdaExpr'><code>LambdaExpr</code></td><td></td><td></td></tr><tr><td id='variant.ObjCBoolLiteralExpr'><code>ObjCBoolLiteralExpr</code></td><td></td><td></td></tr><tr><td id='variant.ObjCSelfExpr'><code>ObjCSelfExpr</code></td><td></td><td></td></tr><tr><td id='variant.UnexposedStmt'><code>UnexposedStmt</code></td><td></td><td></td></tr><tr><td id='variant.LabelStmt'><code>LabelStmt</code></td><td></td><td></td></tr><tr><td id='variant.CompoundStmt'><code>CompoundStmt</code></td><td></td><td></td></tr><tr><td id='variant.CaseStmt'><code>CaseStmt</code></td><td></td><td></td></tr><tr><td id='variant.DefaultStmt'><code>DefaultStmt</code></td><td></td><td></td></tr><tr><td id='variant.IfStmt'><code>IfStmt</code></td><td></td><td></td></tr><tr><td id='variant.SwitchStmt'><code>SwitchStmt</code></td><td></td><td></td></tr><tr><td id='variant.WhileStmt'><code>WhileStmt</code></td><td></td><td></td></tr><tr><td id='variant.DoStmt'><code>DoStmt</code></td><td></td><td></td></tr><tr><td id='variant.ForStmt'><code>ForStmt</code></td><td></td><td></td></tr><tr><td id='variant.GotoStmt'><code>GotoStmt</code></td><td></td><td></td></tr><tr><td id='variant.IndirectGotoStmt'><code>IndirectGotoStmt</code></td><td></td><td></td></tr><tr><td id='variant.ContinueStmt'><code>ContinueStmt</code></td><td></td><td></td></tr><tr><td id='variant.BreakStmt'><code>BreakStmt</code></td><td></td><td></td></tr><tr><td id='variant.ReturnStmt'><code>ReturnStmt</code></td><td></td><td></td></tr><tr><td id='variant.AsmStmt'><code>AsmStmt</code></td><td><div class='docblock'><p>Duplicate of <code>GccAsmStmt</code>.</p>
+</div></td><td></td></tr><tr><td id='variant.ObjCAtTryStmt'><code>ObjCAtTryStmt</code></td><td></td><td></td></tr><tr><td id='variant.ObjCAtCatchStmt'><code>ObjCAtCatchStmt</code></td><td></td><td></td></tr><tr><td id='variant.ObjCAtFinallyStmt'><code>ObjCAtFinallyStmt</code></td><td></td><td></td></tr><tr><td id='variant.ObjCAtThrowStmt'><code>ObjCAtThrowStmt</code></td><td></td><td></td></tr><tr><td id='variant.ObjCAtSynchronizedStmt'><code>ObjCAtSynchronizedStmt</code></td><td></td><td></td></tr><tr><td id='variant.ObjCAutoreleasePoolStmt'><code>ObjCAutoreleasePoolStmt</code></td><td></td><td></td></tr><tr><td id='variant.ObjCForCollectionStmt'><code>ObjCForCollectionStmt</code></td><td></td><td></td></tr><tr><td id='variant.CXXCatchStmt'><code>CXXCatchStmt</code></td><td></td><td></td></tr><tr><td id='variant.CXXTryStmt'><code>CXXTryStmt</code></td><td></td><td></td></tr><tr><td id='variant.CXXForRangeStmt'><code>CXXForRangeStmt</code></td><td></td><td></td></tr><tr><td id='variant.SEHTryStmt'><code>SEHTryStmt</code></td><td></td><td></td></tr><tr><td id='variant.SEHExceptStmt'><code>SEHExceptStmt</code></td><td></td><td></td></tr><tr><td id='variant.SEHFinallyStmt'><code>SEHFinallyStmt</code></td><td></td><td></td></tr><tr><td id='variant.MSAsmStmt'><code>MSAsmStmt</code></td><td></td><td></td></tr><tr><td id='variant.NullStmt'><code>NullStmt</code></td><td></td><td></td></tr><tr><td id='variant.DeclStmt'><code>DeclStmt</code></td><td></td><td></td></tr><tr><td id='variant.OMPParallelDirective'><code>OMPParallelDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPSimdDirective'><code>OMPSimdDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPForDirective'><code>OMPForDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPSectionsDirective'><code>OMPSectionsDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPSectionDirective'><code>OMPSectionDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPSingleDirective'><code>OMPSingleDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPParallelForDirective'><code>OMPParallelForDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPParallelSectionsDirective'><code>OMPParallelSectionsDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPTaskDirective'><code>OMPTaskDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPMasterDirective'><code>OMPMasterDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPCriticalDirective'><code>OMPCriticalDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPTaskyieldDirective'><code>OMPTaskyieldDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPBarrierDirective'><code>OMPBarrierDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPTaskwaitDirective'><code>OMPTaskwaitDirective</code></td><td></td><td></td></tr><tr><td id='variant.OMPFlushDirective'><code>OMPFlushDirective</code></td><td></td><td></td></tr><tr><td id='variant.SEHLeaveStmt'><code>SEHLeaveStmt</code></td><td></td><td></td></tr><tr><td id='variant.TranslationUnit'><code>TranslationUnit</code></td><td></td><td></td></tr><tr><td id='variant.UnexposedAttr'><code>UnexposedAttr</code></td><td></td><td></td></tr><tr><td id='variant.IBActionAttr'><code>IBActionAttr</code></td><td></td><td></td></tr><tr><td id='variant.IBOutletAttr'><code>IBOutletAttr</code></td><td></td><td></td></tr><tr><td id='variant.IBOutletCollectionAttr'><code>IBOutletCollectionAttr</code></td><td></td><td></td></tr><tr><td id='variant.CXXFinalAttr'><code>CXXFinalAttr</code></td><td></td><td></td></tr><tr><td id='variant.CXXOverrideAttr'><code>CXXOverrideAttr</code></td><td></td><td></td></tr><tr><td id='variant.AnnotateAttr'><code>AnnotateAttr</code></td><td></td><td></td></tr><tr><td id='variant.AsmLabelAttr'><code>AsmLabelAttr</code></td><td></td><td></td></tr><tr><td id='variant.PackedAttr'><code>PackedAttr</code></td><td></td><td></td></tr><tr><td id='variant.PureAttr'><code>PureAttr</code></td><td></td><td></td></tr><tr><td id='variant.ConstAttr'><code>ConstAttr</code></td><td></td><td></td></tr><tr><td id='variant.NoDuplicateAttr'><code>NoDuplicateAttr</code></td><td></td><td></td></tr><tr><td id='variant.CUDAConstantAttr'><code>CUDAConstantAttr</code></td><td></td><td></td></tr><tr><td id='variant.CUDADeviceAttr'><code>CUDADeviceAttr</code></td><td></td><td></td></tr><tr><td id='variant.CUDAGlobalAttr'><code>CUDAGlobalAttr</code></td><td></td><td></td></tr><tr><td id='variant.CUDAHostAttr'><code>CUDAHostAttr</code></td><td></td><td></td></tr><tr><td id='variant.PreprocessingDirective'><code>PreprocessingDirective</code></td><td></td><td></td></tr><tr><td id='variant.MacroDefinition'><code>MacroDefinition</code></td><td></td><td></td></tr><tr><td id='variant.MacroExpansion'><code>MacroExpansion</code></td><td><div class='docblock'><p>Duplicate of <code>MacroInstantiation</code>.</p>
+</div></td><td></td></tr><tr><td id='variant.InclusionDirective'><code>InclusionDirective</code></td><td></td><td></td></tr><tr><td id='variant.ModuleImportDecl'><code>ModuleImportDecl</code></td><td></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'><h4 id='method.hash' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></h4>
+<h4 id='method.hash_slice' class='method'><span class="since">1.3.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'><h4 id='method.cmp' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#tymethod.cmp' class='fnname'>cmp</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html' title='core::cmp::Ordering'>Ordering</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html' title='core::cmp::PartialOrd'>PartialOrd</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'><h4 id='method.partial_cmp' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#tymethod.partial_cmp' class='fnname'>partial_cmp</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html' title='core::cmp::Ordering'>Ordering</a>&gt;</code></h4>
+<h4 id='method.lt' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt' class='fnname'>lt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.le' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le' class='fnname'>le</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.gt' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt' class='fnname'>gt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ge' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge' class='fnname'>ge</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h4>
+<h4 id='method.clone_from' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../clang_sys/enum.CXCursorKind.html' title='clang_sys::CXCursorKind'>CXCursorKind</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "clang_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
