@@ -8,6 +8,7 @@ extern crate syntax;
 extern crate clang_sys;
 
 mod bgmacro;
+mod parser;
 
 use rustc_plugin::Registry;
 
